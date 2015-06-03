@@ -1,0 +1,8 @@
+待做工作：
+	- 用hibernate最新版本dao层
+	- 用mybatis最新版本完成dao层
+	- 用jfinal最新版本完成dao层
+
+缓存应用：
+	- 使用 memcached 完善系统缓存
+	- 使用 redis 客户端jedis做缓存
