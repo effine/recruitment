@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+/**
+*	author:jipeng
+*   全局样式，会引入所以会用到的公用样式
+*/
+
+/* 前端公用样式组件库 */
+@import url("basic/reset.css");
+@import url("basic/common.css");
+
+/*jquery插件*/
+@import url("lib/Validform/Validform.css");
+
+
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 公司 -->
+<hibernate-mapping>
+	<class name="cn.effine.model.Corporation" table="y_corporation">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="corName" type="string">
+			<column name="cor_name" length="50" />
+		</property>
+		<property name="usrId" type="int">
+			<column name="usr_id" not-null="true" />
+		</property>
+		<property name="fullName" type="string">
+			<column name="full_name" />
+		</property>
+		<property name="slogon" type="string" />
+		<property name="label" type="string" />
+		<property name="description" type="string" />
+		<property name="regionId" type="int">
+			<column name="region_id" length="11" />
+		</property>
+		<property name="homepageUrl" type="string">
+			<column name="homepage_url" length="500" />
+		</property>
+		<property name="fields" type="string">
+			<column name="fields" />
+		</property>
+		<property name="scale" type="int" />
+		<property name="logoImgUrl" type="string">
+			<column name="logo_img_url" length="255" />
+		</property>
+		<property name="isMainShow" type="int">
+			<column name="is_main_show"/>
+		</property>
+		<property name="status" type="int" />
+	</class>
+</hibernate-mapping>

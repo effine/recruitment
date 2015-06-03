@@ -1,0 +1,171 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*统一按钮样式*/
+/*透明度*/
+.wrapper {
+  color: #777777;
+}
+.company-basic {
+  width: 1150px;
+  margin: 30px 25px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  border-bottom: 1px dashed #ebebeb;
+}
+.name {
+  font-size: 20px;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 20px;
+}
+.full-name {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.com-intro {
+  margin-top: 15px;
+  line-height: 20px;
+  height: auto;
+}
+.company-logo {
+  float: left;
+  width: 171px;
+  height: 171px;
+  border: 1px solid #ebebeb;
+}
+.basic-msg {
+  float: left;
+  width: 932px;
+  margin-left: 45px;
+  height: auto;
+}
+.welfare {
+  min-height: 20px ;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.welfare-item {
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #00cca3;
+  border-right: none;
+  width: auto;
+  min-width: 52px;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  background: #fff;
+  padding: 0 3px 0 5px;
+  margin-right: 10px;
+}
+.welfare-item span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 22px;
+  top: 0;
+  right: -10px;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -60px -56px;
+}
+.details-intr {
+  width: 1150px;
+  padding: 20px 25px;
+  overflow: hidden;
+}
+.intr {
+  width: 705px;
+  float: left;
+  font-size: 14px;
+  height: 22px;
+  line-height: 22px;
+}
+.right-company-details {
+  float: left;
+  margin-left: 30px;
+  width: 415px;
+}
+.details-header {
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #fafafa;
+}
+.details-header h1 {
+  width: 90px;
+  text-align: center;
+  border-bottom: 2px solid #00cca3;
+}
+.details-header .btn-editor {
+  top: 12px;
+  right: 12px ;
+}
+.job-tell {
+  padding: 0 20px 18px;
+  border: 2px solid #fafafa;
+}
+.job-tell li {
+  height: 38px;
+  line-height: 38px;
+  border-bottom: 2px solid #fafafa;
+  width: 377px;
+}
+.job-tell li a {
+  color: #00cca3;
+}
+.partTime-job {
+  width: 1182px;
+  padding-left: 15px;
+  border-left: 3px solid #00cca3;
+  font-size: 20px;
+  height: 28px;
+  line-height: 28px;
+}
+.job-list {
+  width: 100%;
+  margin-top: 20px;
+  color: #777;
+}
+.job-list tr {
+  text-align: center;
+}
+.job-list .even {
+  background: #fff;
+}
+.job-list .even .job-name {
+  border-right: 3px solid #fafafa;
+}
+.job-list .odd {
+  background: #fafafa;
+}
+.job-list .odd .job-name {
+  border-right: 3px solid #fafafa;
+}
+.job-name {
+  font-size: 20px;
+  width: 247px;
+}
+.job-name span {
+  font-size: 16px;
+}
+.job-ask,
+.job-attract {
+  height: 25px;
+  line-height: 25px;
+}
+.publish-time {
+  position: relative;
+  height: 71px;
+  width: 100px;
+}
+.publish-time span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #00cca3;
+  font-size: 12px;
+  display: block;
+  width: 90px;
+  height: 20px;
+}

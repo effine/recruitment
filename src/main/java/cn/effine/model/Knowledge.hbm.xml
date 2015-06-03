@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 知识分类 -->
+<hibernate-mapping>
+	<class name="cn.effine.model.Knowledge" table="y_knowledge">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="knoName" type="string">
+			<column name="kno_name" length="50">
+				<comment>知识分类名称</comment>
+			</column>
+		</property>
+		<property name="englishName" type="string">
+			<column name="english_name" length="50">
+				<comment>知识分类英文名</comment>
+			</column>
+		</property>
+		<property name="logoUrl" type="string">
+			<column name="logo_url">
+				<comment>logo</comment>
+			</column>
+		</property>
+		<property name="bigLogoUrl" type="string">
+			<column name="big_logo_url">
+				<comment>知识分类类别介绍图</comment>
+			</column>
+		</property>
+		<property name="description" type="string">
+			<column name="description">
+				<comment>知识分类名称描述</comment>
+			</column>
+		</property>
+		<property name="sortIndex" type="int">
+			<column name="sort_index">
+				<comment>显示顺序</comment>
+			</column>
+		</property>
+		<property name="isOntop" type="int">
+			<column name="is_ontop" not-null="true">
+				<comment>是否显示在首页上（否：0；是：1）</comment>
+			</column>
+		</property>
+		<property name="status" type="int">
+			<column name="status" not-null="true">
+				<comment>是否可用（否：0；是：1）</comment>
+			</column>
+		</property>
+		<property name="operationTime" type="string">
+			<column name="operation_time" length="50" not-null="true">
+				<comment>操作时间</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

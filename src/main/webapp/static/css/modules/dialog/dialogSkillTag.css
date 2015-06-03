@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+	.skill-tag-box{width:512px;min-height:154px;padding: 25px 25px 16px 25px ; background: #fff;opacity: 0.8;filter:alpha(opacity=80);-moz-opacity:0.8;-webkit-opacity:80;}
+	.dialog .dialog-header h2{text-align: left;text-indent: 24px;font-size:16px}
+	.dialog  .skill-tag-box{color:#929292}
+	.skill-tag-box .box-item label{float:left;padding-right: 12px}
+	.skill-tag-box .skill-tags{min-height:60px}
+	.skill-tag-box .skill-tags .tags-ul{margin-left: 0}
+	.skill-tag-box .skill-tags-ul, .skill-tag-box .ipt-box{float:left}
+	.skill-tag-box .ipt{
+		border: 1px solid #ccc;
+		outline: none;
+		color: #646464;
+		margin: 0;
+		width: 352px;
+		padding: 4px;
+		height: 20px;
+	}
+	.ipt-box .tags-tips{line-height: 26px;padding:0 2px}
+	.skill-tag-box .box-operate{margin:8px 80px 0 80px;text-align: center;}
+	.box-operate a {height:32px;line-height: 32px;width:172px;display: inline-block;text-align: center}
+	.box-operate .btn-sure{background:#00cca3 }
+	.box-operate .btn-cancel{background:#c8c8c8;margin-left:6px}

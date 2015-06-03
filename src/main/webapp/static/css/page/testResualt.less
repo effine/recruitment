@@ -1,0 +1,88 @@
+@import "parameters";
+.wrapper{
+  color: #777777;
+}
+.title{
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  .h(20px);
+}
+
+.testResualt{
+  width: 100%;
+  margin-top: 40px;
+  h1{
+    border-left: 3px solid @base-color;
+    .h(32px);
+    font-size: 18px;
+    padding-left: 15px;
+  }
+}
+
+.advice{
+  width: 1200-70px;
+  min-width: 117px;
+  background: #fafafa;
+  font-size: 14px;
+  padding: 35px;
+  overflow: hidden;
+}
+
+.advice-item{
+  width: 904px;
+  height: auto;
+  overflow: hidden;
+  .f(l);
+  li{
+    .f(l);
+    width: 372px;
+    min-height: 22px;
+    line-height: 22px;
+  }
+  .even{
+    border-left: 1px dashed #c6c6c6;
+    width: 300px;
+    padding-left: 72px;
+  }
+}
+.btn-study{
+  .a(204px,44px);
+  .f(l);
+}
+.commad-courses{
+  margin-top: 20px;
+}
+.commad-header{
+  border-left: 3px solid @base-color;
+  .h(32px);
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+.tips{
+  margin-top: 28px;
+  span{
+    color: @base-color;
+    font-style: italic;
+  }
+}
+.video-item{width: 280px;height: 226px;float: left;margin-left: 13px;margin-top: 16px;}
+.video-link{display: block;height: 100%;height: 100%;}
+.video-link .time{display: none;}
+.video-link:hover .time,.video-link:hover .border-bottom{
+  display: block;
+}
+.video-link:hover .people{
+  display: none;
+ }
+.first-video-item{margin-left: 0;}
+.video-img{width: 280px;height: 160px;}
+.video-content{width: 280px;position: relative;}
+.video-title{height: 33px;line-height: 33px;font-size: 14px;color: #777777;text-align: left;padding-left: 7px;}
+.vedeo-count{display: block;padding-left: 24px;height: 16px;line-height: 16px;color: #777777;margin-left: 7px;}
+.people{background: url("/static/images/icon/vision.png") no-repeat;}
+.time{background: url("/static/images/icon/eyes.png") no-repeat;}
+.item-current .video-msg{background: #fff;}
+.video-msg{padding-bottom:10px;}
+.border-bottom{width: 100%;position: absolute;top:100%;margin-top:-2px;height: 2px;background: #00cca3;display: none;}

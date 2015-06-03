@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-21 11:32:40
+ * @version $Id$
+ */
+.cominfo-content {width:960px;margin: 0 auto}
+.cominfo-content .cominfo-head {
+margin-top: 30px;
+height: 36px;
+overflow: hidden;
+border-bottom: 1px dashed #ececec;
+padding-left: 196px;
+}
+.cominfo-content .cominfo-head h3{
+    font-size: 16px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+.cominfo-content .cominfo-body{padding-left: 196px}
+.cominfo-guid {padding:24px 0 24px 106px}
+.cominfo-guid li{float: left;height: 42px}
+.cominfo-guid a,.cominfo-guid span{ display: inline-block;}
+.cominfo-guid .guid-item{
+    background: url('../../../../images/icon/com-guid.png')  no-repeat;
+    width: 42px;
+    height: 42px;
+}
+.cominfo-guid .guid-base{background-position: 0 0}
+.cominfo-guid .guid-tag{background-position: -64px 0}
+.cominfo-guid .guid-intro{background-position: -130px 0}
+.cominfo-guid .guid-base.active,.cominfo-guid .guid-tag.active,.cominfo-guid .guid-intro.active,.cominfo-guid a:hover{background-position-y:-52px}
+.cominfo-guid .guid-line{width: 42px;margin: 0 36px;height: 2px;background-color: #c8c8c8;position: relative;top:8px;}
+.cominfo-guid .guid-line.active{background-color:#ff9c16}
+
+.cominfo-body .form-box {font-size: 18px}
+.form-box .form-tip{padding: 24px 0;color:#7e7e7e}
+.form-box  .com-name{margin-left: 28px}
+.form-box .form-con{margin-top: 20px}
+.form-box .form-item{margin-bottom: 18px;line-height: 32px;color:#9d9d9d}
+.form-box .tips{
+font-size: 14px;
+height: 20px;
+display: inline-block;
+vertical-align: middle;
+margin-top: 0px;
+text-indent:8px;
+}
+
+.form-box .form-item .upload-pic-box{float:left;width: 192px;height:192px;position: relative;margin-left: 28px}
+.upload-pic-box .btn-upload-pic{position: absolute;bottom: 0;left:0;width:100%;text-align: center;background:#4ac4ac;color: #fff}
+.form-box .form-item label {
+float: left;
+}
+.upload-pic label{width:108px;}
+.form-box .form-item input{
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+vertical-align: middle;
+padding: 5px;
+width: 290px;
+border: 1px solid #d2d2d2;
+outline: none;
+margin-left: 28px;
+}
+.form-box .form-item select{
+	font-size: 14px;
+line-height: 20px;
+vertical-align: middle;
+padding: 5px;
+	border: 1px solid #d2d2d2;
+	outline: none;
+	width: 302px;
+	margin-left: 28px;
+}
+.form-box .btn-next{
+    width: 256px;
+height: 40px;
+font-size: 16px;
+line-height: 40px;
+text-align: center;
+background: #00cca3;
+color: #fff;
+margin-left: 162px;
+display: block;
+margin-top: 100px;
+}

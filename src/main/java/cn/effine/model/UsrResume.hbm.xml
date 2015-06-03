@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 用户简历 - 基本信息 -->
+<hibernate-mapping>
+	<class name="cn.effine.model.UsrResume" table="y_usr_resume">
+		<id name="id" type="integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="usrId" type="integer">
+			<column name="usr_id" not-null="true">
+				<comment>用户ID</comment>
+			</column>
+		</property>
+		<property name="knoId" type="integer">
+			<column name="kno_id" length="11">
+				<comment>应聘岗位</comment>
+			</column>
+		</property>
+		<property name="name" type="string">
+			<column name="name" length="255">
+				<comment>姓名</comment>
+			</column>
+		</property>
+		<property name="gender" type="integer">
+			<column name="gender" not-null="true">
+				<comment>性别（男：0；女：1；2：未知）</comment>
+			</column>
+		</property>
+		<property name="birthYear" type="string">
+			<column name="birth_year" length="50">
+				<comment>出生年</comment>
+			</column>
+		</property>
+		<property name="birthMonth" type="string">
+			<column name="birth_month" length="50">
+				<comment>出生月</comment>
+			</column>
+		</property>
+		<property name="contact" type="string">
+			<column name="contact" length="50">
+				<comment>联系方式</comment>
+			</column>
+		</property>
+		<property name="email" type="string">
+			<column name="email" length="50">
+				<comment>电子邮箱</comment>
+			</column>
+		</property>
+		<property name="school" type="string">
+			<column name="school" length="255">
+				<comment>学校名称</comment>
+			</column>
+		</property>
+		<property name="major" type="string">
+			<column name="major" length="255">
+				<comment>专业</comment>
+			</column>
+		</property>
+		<property name="avatar" type="string">
+			<column name="avatar" length="255">
+				<comment>头像</comment>
+			</column>
+		</property>
+		<property name="birthPlace" type="string">
+			<column name="birth_place" length="255">
+				<comment>籍贯</comment>
+			</column>
+		</property>
+		<property name="personalStatement" type="string">
+			<column name="personal_statement" length="10000">
+				<comment>自我描述</comment>
+			</column>
+		</property>
+		<property name="createTime" type="string">
+			<column name="create_time" length="50" />
+		</property>
+		<property name="updateTime" type="string">
+			<column name="update_time" length="50" />
+		</property>
+		<property name="education" type="string" />
+		<property name="workyear" type="string" />
+		<property name="label" type="string" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-21 11:32:40
+ * @version $Id$
+ */
+
+.reg-content {
+    width: 960px;
+    margin: 0 auto
+}
+.reg-content .reg-head {
+    margin-top: 30px;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 1px dashed #ececec
+}
+.reg-content .reg-head h3 {
+    font-size: 16px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+.reg-content .reg-head .warp-comtag{width:700px;margin:0 auto;}
+.reg-tip {
+    font-size: 14px;
+    color: #969696;
+    padding-left: 10px
+}
+.reg-com-box {margin-top: 140px}
+.reg-com-box .reg-com-name{width: 412px;margin: 0 auto;position: relative;color: #a4a4a4}
+.reg-com-box .reg-com-name .reg-com-ipt{
+margin-top: 8px;
+line-height: 32px;
+position: relative;
+}
+.reg-com-box .reg-com-name label{font-size: 16px;padding-right: 40px}
+.reg-com-box .reg-com-name input{
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 5px;
+    width: 290px;
+    border: 1px solid #d2d2d2;
+    outline: none;
+    position: absolute;
+    right: 0;
+    *top:-4px;
+}
+.reg-com-box .reg-com-name  .com-name-tip{padding:20px 0;}
+.reg-com-box .reg-com-name .btn-next{width: 256px;height: 40px;font-size: 16px;
+    line-height: 40px;text-align: center;
+    background:#00cca3;color: #fff;
+    margin: 0 auto;
+    display: block;
+    margin-top: 58px;
+}

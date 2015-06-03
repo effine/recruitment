@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 面试 -->
+<hibernate-mapping>
+    <class name="cn.effine.model.CorJobReqInvitation" table="y_cor_job_req_invitation" >
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="corId" type="int">
+            <column name="cor_id" not-null="true" />
+        </property>
+        <property name="usrId" type="int">
+            <column name="usr_id" not-null="true">
+                <comment>用户ID</comment>
+            </column>
+        </property>
+        <property name="jobId" type="int">
+            <column name="job_id" not-null="true">
+                <comment>岗位ID</comment>
+            </column>
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="50">
+                <comment>主题</comment>
+            </column>
+        </property>
+        <property name="faceTime" type="string">
+            <column name="face_time" length="50">
+                <comment>面试时间</comment>
+            </column>
+        </property>
+        <property name="faceAddress" type="string">
+            <column name="face_address">
+                <comment>面试地址</comment>
+            </column>
+        </property>
+        <property name="faceDetail" type="string">
+            <column name="face_detail" length="500">
+                <comment>邀请详情</comment>
+            </column>
+        </property>
+        <property name="createdTime" type="string">
+            <column name="created_time" length="50">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

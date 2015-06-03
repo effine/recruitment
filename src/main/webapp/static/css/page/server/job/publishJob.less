@@ -1,0 +1,106 @@
+@import "../../nav-left";
+
+
+.publish-header{
+  width: 1200-40-3-@left-nav-width;
+  border-left: 3px solid @base-color;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+  h1{
+    width: 115px;
+    margin-left:16px ;
+    color: @base-font-color;
+    font-size:20px ;
+    .f(l);
+  }
+}
+/*头部*/
+.header-msg{
+  .f(r);
+  overflow: hidden;
+  .has-published,.leave-jobs{
+    display: block;
+    .f(r);
+    color: @base-font-color;
+    span{
+      color:@base-color;
+      margin: 0 5px;
+      font-style: italic;
+    }
+  }
+}
+.leave-jobs{
+  margin-left: 24px;
+}
+
+.part{
+  padding: 10px 0 20px 0;
+  border-bottom: 1px dashed #c9c9c9;
+}
+.part-item{
+  margin-top: 20px;
+  margin-left: 18px;
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+  span,select{
+    display: block;
+    .f(l);
+  }
+}
+
+.need{
+  color: #f06060;
+  width: 15px;
+  text-align: center;
+}
+
+.input-section{
+  margin-left: 13px;
+  width: 208px;
+  height: 14px;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 2px solid #e6e6e6;
+}
+.work-type{
+  display: block;
+  .f(l);
+ text-align: center;
+  margin-left: 28px;
+  background: #fafafa;
+  width: 50px;
+  color: @base-font-color;
+}
+.part-time-job{
+  color: #fff;
+  background: @base-color;
+}
+.separate{
+  width:40px ;
+  height: 35px;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -53px 0;
+}
+.input-salary{
+  width: 96px;
+  .f(l);
+}
+.input-high-salary{
+  margin-left: 0;
+}
+.job-describe{
+  width: 442px;
+}
+.submit-buttons{
+  height: 32px;
+  margin-top: 20px;
+  .f(r);
+  width: 234px;
+  overflow: hidden;
+  a{
+    .f(l);
+    .a(110px,32px);
+    margin-left: 7px;
+  }
+}

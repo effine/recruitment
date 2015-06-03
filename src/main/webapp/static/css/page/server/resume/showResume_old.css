@@ -1,0 +1,315 @@
+@CHARSET "UTF-8";
+@import url('/static/css/lib/JqueryUI/jquery.mCustomScrollbar.css');
+@import url('/static/css/modules/dialog/dialog.css');
+@import url('/static/css/modules/dialog/dialogSkillTag.css');
+		.bt-line{border-top:1px solid #00cca3;}
+		.wrap{width: 1200px;margin: 0 auto;}
+		.per-resume .mod-nav{border-top:1px solid #00cca3;border-bottom:1px solid #e5e5e5 }
+		.per-info{display: block}
+		.mod-nav h2{
+					height: 58px;
+					line-height: 58px;
+					position: relative;
+					font-size: 18px;
+					 font-weight: bold;
+					 vertical-align: middle;
+					color: #646464;
+				}
+		.info-nav h4{
+					height: 60px;
+					line-height: 60px;
+					position: relative;
+					font-size: 16px;
+					vertical-align: middle;
+					color: #646464;
+		}
+		.mod-nav h2 em{
+			font-size: 10px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			color:#c8c8c8;	
+		}
+		.btn-exp{
+			/* background:#00cca3;
+			color:#fff;*/
+			width:88px;
+			height:40px; 
+			background: url('/static/images/icon/resume_icon.png') no-repeat -64px -3px;
+			margin:8px 20px ;
+
+		}
+		.overflow-in{overflow:inherit;}
+		.info-nav{border-bottom: 1px dashed #e5e5e5;position:relative;}
+		.info-nav button{
+			margin:12px 20px ;
+			float:right;
+			position:absolute;
+			top:0;
+			right:0;
+		}
+		.info-detail{
+			padding:20px 58px;
+			display: block;
+		}
+		.info-detail h4{
+					height: 30px;
+					line-height: 30px;
+					position: relative;
+					font-size: 18px;
+		}
+		.info-detail .month{width: 80px;height: 30px;line-height: 30px;border: 1px solid #d2d2d2;font-size: 13px;margin-left: 10px;}
+		.info-detail .year{width: 90px;height: 30px;line-height: 20px;border: 1px solid #d2d2d2;font-size: 13px;}
+		.info-detail input,.info-detail select{border: 1px solid #ccc;outline: none;color: #646464;margin:0;padding:2px;width:180px}
+		.info-detail input{padding:4px;height: 20px}
+		.info-detail select{height: 30px}
+		.resume-btn-edit{
+			 width: 46px;height: 32px;background: url('/static/images/icon/resume_icon.png') no-repeat -7px -3px;
+		}
+		.resume-btn-save{
+			 width: 46px;height: 32px;background: url('/static/images/icon/resume_icon.png') no-repeat -7px -49px;;
+		}
+		.resume-btn-add{line-height:30px;position:absolute;left:-58px;background: url('/static/images/icon/resume_icon.png') no-repeat -7px -86px;width: 36px;height: 23px;}
+		.resume-btn-del{line-height:30px;position:absolute;left:-58px;top:6px;background: url('/static/images/icon/resume_icon.png') no-repeat -64px -87px;width: 36px;height: 23px;}
+		/*子项重写*/
+		.pro-pro-input {padding-top:20px}
+		.pro-pro-input .resume-btn-add{line-height:30px;position:relative;left:0px;background: url('/static/images/icon/resume_icon.png') no-repeat -7px -86px;width: 36px;height: 23px;}
+		.pro-pro-input .resume-btn-del{line-height:30px;position:relative;left:0px;top:6px;background: url('/static/images/icon/resume_icon.png') no-repeat -64px -87px;width: 36px;height: 23px;}
+		/*button 位置*/
+		.resume-add{position:relative;height:46px;}
+		.resume-del{position:relative;/* height:30px; */margin:10px 0;}
+	    .resume-del .c-margin{margin-left:50px }
+	    .resume-del .c-block{display:block; width:800px;margin:10px ;margin-left: 60px}	
+	    .resume-del-child{height:auto;}
+
+	    .resume-del .start-sch{width:80px;}
+	    .resume-del .end-sch{width:80px;}
+	    .resume-del .school{width:220px;}
+	    .resume-del .degree{width:100px;}
+
+	    .resume-del .reward-name{width:220px;}
+	    .resume-del .reward-leavel{width:170px;}
+	    .resume-del .reward-leavel{width:170px;}
+
+	    .resume-del .pro-start,.resume-del .pro-end{width:80px }
+	    .resume-del .pro-company{width:160px;}
+	    .resume-del .pro-department{width:160px;}
+	    .resume-del .pro-post{width:160px;}
+
+	    .resume-del .pro-name{width:220px;margin-left: 20px}
+	    .resume-del .pro-skill{margin-left:96px;font-weight: bold;width: 490px;display: inline-table;}
+		 .resume-del .pro-skill .skill{margin:2px;padding:4px;color:#ffffff;display:inline-block;text-align:center;line-height:20px;background-color:#00cca3; min-width: 36px;height: 20px;border-radius:2px;}
+
+		.reward-nav{margin: 10px 0;width: 100%;position:relative;}
+		.edu-reward-input .resume-btn-add,.edu-reward-input .resume-btn-del{left:0}
+		.edu-reward-input .resume-del{padding-left:58px}
+		.edu-reward-input .reward-name{width:15.7%}
+		.edu-reward-input .rewrad-intro{width:79%;float:right}
+		
+		
+		 /*基本信息*/
+		.per-img{
+			width:170px;
+
+		}
+		.base-info{padding-left:172px;}
+		.base-info dt{height:48px;}
+/* 				.base-info dt span {color:#8b8b8b;line-height: 30px;margin-left: 20px;font-size: 12px} */
+		.base-info dt,.base-info dd{display: inline-block;width:290px;overflow: hidden;}
+		.base-info dd{color:#646464;line-height: 36px}
+
+		.base-info-input label{width:90px;text-align: right;display: inline-block;}
+		.base-info-input input{width: 180px;}
+		
+		.base-info-input .sexual span{display: inline-block;width:74px;padding:0 10px;height:20px;line-height: 20px}
+		.icon-radio{height:20px;display: inline-block;}
+		.icon-radio i{margin:0 10px; cursor: pointer;}
+		.icon-radio-nor {width: 20px;height: 20px;display: inline-block;background: url(/static/images/icon/resume_icon.png) no-repeat -121px -87px;position: relative;top:4px;}
+		.icon-radio-cur {width: 20px;height: 20px;display:  inline-block;background: url(/static/images/icon/resume_icon.png) no-repeat -121px -55px;top:4px;}
+		.validate_tips{display:inline-block;}
+		/*技能评估*/
+		.skill-img{
+			width:424px;
+		}
+		.skill-info{padding-left:426px;width:100%;}
+		.skill-info p{height:30px;line-height: 30px;}
+		.skill-info p span{float: left;display: inline-block;}
+		.skill-info span.name{color:#9b9b9b;width: 112px;text-align: left;padding:0 10px;}
+		.skill-info span.dian{font-family: Arial;color: #dadada;display: inline-block;width: 100px;}
+		.skill-info span.result{font-size: 16px;padding:0 20px;/* font-family: "宋体" */}
+		/*教育经历*/
+		.edu-info-view li span{width:200px;display: inline-block;line-height: 40px}
+		.edu-info-view h2{line-height: 30px;color:#a2a2a2;}
+		.edu-info-view ul li,.project-info-view ul li{color:#646464;}
+		/*项目经历*/
+		.project-info-view h2,.por-text label{line-height: 30px;font-size: 16px;width:128px;}
+		.pro-list span{width:200px;display: inline-block;line-height: 40px;color:#646464;}
+		.project-info-view .skill{color: #00cca3}
+		.por-text{color: #838383;line-height: 30px;padding-left:90px;}
+	    .por-text dt{color:#646464;}
+	    .por-text dd{display: block;width:100%;}
+	    /*自我评价*/
+	    .introself-info{color: #838383;line-height: 30px;}
+	    .introself-info-box{margin-top: 20px;border: 1px solid #e5e5e5;color: #7e7e7e;}
+	    .introself-info-box textarea{border: none;outline: none;width:96%;height:80px;padding:10px 2%;line-height:20px;}
+	    
+	    .introself-title{height: 32px;border-bottom: 1px dotted #e5e5e5;line-height: 32px;vertical-align: middle;padding-left: 20px;}
+	    
+
+	    /*滚动弹框*/
+	    .skill-content{
+		    	width:240px; height:600px; 
+		    	overflow:auto;position:relative; 
+		    	background:  hsl(0, 0%, 34%); 
+				border-radius:6px;
+	    }
+	    .page-skill-win{
+	    	height:278px;
+	    	position:absolute;
+	    	z-index: 2;
+	    	top:-220px;
+	    	left:30px;
+	    }
+	     .page-skill{
+	    	height:278px;
+	    }
+	    .tag-pane{
+		 padding: 14px 0 14px 14px;
+		width: 212px;
+		height: auto;
+		/* -moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px; */
+		background:/*  hsl(0, 0%, 34%); */#3e4143;
+		border: 1px solid hsla(0, 0%, 0%, 0.29);
+		border-top:0;
+		box-shadow: -1px 1px 3px 0 hsla(0, 0%, 0%, 0.5);
+		top: 0;
+	     }
+	     .tag-pane dt.pane-category{color:#00cda2}
+	     .tag-pane dd{padding-left:2px}
+	   .tag-pane li a {
+		color: hsl(0, 0%, 51%);
+		font-size: 14px;
+		padding: 3px;
+		background: 0 0;
+		}
+		.tag-pane li {
+		float: left;
+		margin: 0 3px 5px 0;
+		}
+		.tag-pane dt , .tag-pane  dd{display:inline-block;width:212px;}
+		.tag-pane li.active a{
+			color: hsl(0, 0%, 87%);
+			border-radius: 2px;
+			background: hsl(0, 0%, 31%);
+			box-shadow: inset 0 1px 0 0 hsla(0, 0%, 0%, 0.08);
+		}
+		/* .skill-pointer {
+			position: absolute;
+			right: 0;
+			top: 0;
+			top: 50%;
+		}
+		 .skill-pointer .pointer{
+			position: relative;
+			left: 20px;
+			width: 20px;
+			height: 34px;
+			background: url(img/bubble-pointer.png) left top no-repeat;
+			z-index:2;
+		} */
+	    .skill_win_t i{width:13px;height:9px;background: url(/static/images/icon/skill_win_point.png)  no-repeat;display: inline-block;}
+	    
+	     
+	    
+	    
+	    /***********************************************************/
+	    /*头像上传*/
+	    .per-upload-img{
+	    color:#ffffff;height:40px;width:116px;background: #00cca3;overflow:hidden;
+	    text-align: center;line-height: 40px;position:absolute;bottom:0;cursor:pointer;
+	    filter:alpha(opacity=80);
+		-moz-opacity:0.8;
+		-khtml-opacity: 0.8;
+		opacity: 0.8;
+	    }
+	     .jcrop-holder .preview-pane {display: inline-block;position: absolute;/*	z-index: 2000;top: 0px;*/width:116px;padding: 6px;left:450px;
+		border: 1px rgba(0, 0, 0, .4) solid;background-color: white;-webkit-border-radius: 6px;-moz-border-radius: 6px;
+		border-radius: 6px;-webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+		}
+	.preview-pane .preview-container {width: 116px;height: 160px;overflow: hidden;}
+	form .files{position: relative;}
+	form .preview{display: inline-block;float:left;}
+	.fileinput-button input{font-size: 14px;width:115px;height:30px;top:-5px;right:5px;}
+	.profileImgPreview{margin-top:20px;}
+	
+	/*scroolBar fix*/
+	/*yl custom bar*/
+	.mCSB_container{margin:0;padding-right:30px;}
+	/* content_2 scrollbar */
+	.yl_skill .mCSB_scrollTools .mCSB_draggerRail{
+		width:8px;
+		box-shadow:1px 1px 1px rgba(255,255,255,0.1);
+	}
+	.yl_skill .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		width:8px;
+		background:rgba(0,205,162,0.4);
+		filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
+	}
+	.yl_skill .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+		background:rgba(0,205,162,0.5);
+		filter:"alpha(opacity=50)"; -ms-filter:"alpha(opacity=50)"; /* old ie */
+	}
+	.yl_skill .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.yl_skill .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+		background:rgba(0,205,162,0.6);
+		filter:"alpha(opacity=60)"; -ms-filter:"alpha(opacity=60)"; /* old ie */
+	}
+	/********************************************************************************/
+	.tags-ul{margin-left: 154px}
+.tags-ul li{float: left;margin-bottom: 10px;position:relative;}
+.tags-ul li a{
+	height: 29px;
+	cursor:text;
+	float: left;
+	color:#777777;
+}
+.tags-ul .active ,.tags-ul a:hover {color: #01cca3;}
+.tags-ul .tag span{
+	border: 1px solid #ebebeb;border-right: none;;border-radius: 2px;
+	height: 27px;
+	display: inline-block;
+	line-height: 27px;
+	font-size: 14px;
+	padding:0 8px;
+	float: left;
+	background-color: #fafafa;
+}
+.tags-ul .active span,.tags-ul a:hover span{border: 1px solid #01cca3;border-right: none;;border-radius: 2px;background:#fff;color: #01cca3; }
+
+.tags-ul .tag em{
+	background:url(../../../../images/icon/com_fill_icon.png) no-repeat  -24px -98px;color: #01cca3;cursor:text;
+	width:14px;
+	height: 29px;
+	display: inline-block;
+	position: relative;
+	right: 1px;
+}
+.tags-ul .active em,.tags-ul a:hover em{background-position: 0 -98px;}
+.tags-ul li{margin-right: 40px}
+.tags-ul li i{
+     background: url(../../../../images/icon/com_fill_icon.png) no-repeat -42px -98px;
+     width:19px;
+     height:19px;
+     display: inline-block;
+	position: absolute;
+	top: 5px;
+     cursor: pointer;
+     margin-left:8px
+	}
+.per-skill-info .skill-tags-ul{position:relative;}
+.per-skill-info .info-detail{padding-right:0}
+.per-skill-info	.tags-ul{margin-left:0}
+.per-skill-info	.tags-ul ul{width:63%;float:right}

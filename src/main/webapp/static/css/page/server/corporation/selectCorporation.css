@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-21 11:32:40
+ * @version $Id$
+ */
+
+.reg-content {
+    width: 960px;
+    margin: 0 auto
+}
+.reg-content .reg-head {
+    margin-top: 30px;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 1px dashed #ececec
+}
+.reg-content .reg-head h3 {
+    font-size: 16px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+.reg-content .reg-head .warp-comtag{width:700px;margin:0 auto;}
+.reg-tip {
+    font-size: 14px;
+    color: #969696;
+    padding-left: 10px
+}
+.reg-com-box {width:644px;margin:0 auto;color:#7e7e7e;padding-left:1em;}
+.reg-com-box .choose-com{margin-top: 82px}
+.reg-com-box .com-lists{padding-top: 14px}
+.choose-com .com-tip{line-height: 42px;font-size: 16px;}
+.com-lists li{float:left;margin-right: 1em;margin-bottom: 16px}
+.com-lists a,.create-com .btn-create-com{padding: 8px 26px;display: inline-block;background:#00cca3;color: #fff;cursor: pointer;}
+.com-lists a:hover,.create-com .btn-create-com:hover{background: #0ea}
+.create-com .create-com-tip{padding: 22px 0 16px 0 }

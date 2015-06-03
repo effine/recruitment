@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-21 11:32:40
+ * @version $Id$
+ */
+.cominfo-content {width:960px;margin: 0 auto}
+.cominfo-content .cominfo-head {
+margin-top: 30px;
+height: 36px;
+overflow: hidden;
+border-bottom: 1px dashed #ececec;
+padding-left: 196px;
+}
+.cominfo-content .cominfo-head h3{
+    font-size: 16px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+.cominfo-content .cominfo-body{padding-left: 196px}
+.cominfo-guid {padding:24px 0 24px 106px}
+.cominfo-guid li{float: left;height: 42px}
+.cominfo-guid a,.cominfo-guid span{ display: inline-block;}
+.cominfo-guid .guid-item{
+    background: url('../../../../images/icon/com_fill_icon.png')  no-repeat;
+    width: 42px;
+    height: 42px;
+}
+.cominfo-guid .guid-base{background-position: 0 0}
+.cominfo-guid .guid-tag{background-position: -64px 0}
+.cominfo-guid .guid-intro{background-position: -130px 0}
+.cominfo-guid .guid-base.active,.cominfo-guid .guid-tag.active,.cominfo-guid .guid-intro.active,.cominfo-guid a:hover{background-position-y:-52px}
+.cominfo-guid .guid-line{width: 42px;margin: 0 36px;height: 2px;background-color: #c8c8c8;position: relative;top:8px;}
+.cominfo-guid .guid-line.active{background-color:#ff9c16}
+
+.form-box .form-tip,.form-box .form-item label {font-size: 18px}
+.form-box .form-tip{padding: 24px 0;color:#7e7e7e}
+.form-box  .com-name{margin-left: 28px}
+.form-box .form-con{margin-top: 20px}
+.form-box .form-item{margin-bottom: 18px;/* line-height: 32px; */color:#9d9d9d}
+.upload-pic label{display: block;width:108px;float:left;}
+.form-box .form-item .upload-pic-box{float:left;width: 192px;height:192px;position: relative;margin-left: 28px}
+.upload-pic-box .btn-upload-pic{position: absolute;bottom: 0;width:100%;text-align: center;background:#4ac4ac;color: #fff}
+.form-box .form-item input{
+font-size: 14px;
+height: 20px;
+line-height: 20px;
+vertical-align: middle;
+padding: 5px;
+width: 290px;
+border: 1px solid #d2d2d2;
+outline: none;
+margin-left: 28px;
+}
+.form-box .form-item .tips{
+	font-size: 14px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 0px;
+	text-indent: 8px;
+	margin-left: 8px;
+}
+.form-box .form-item .valid_wrong{
+	color: #f45e64;
+	padding-left: 20px;
+	white-space: nowrap;
+	background: url('../../../../images/icon/login_icon.png') no-repeat -12px -93px;
+}
+.com-tags .com-tags-own{font-size: 18px;line-height: 32px}
+/* .com-tags .tags-ul{margin-left: 154px}
+.sys-tags .tags-ul{margin-left: 30px} */
+.tags-ul{margin-left: 154px}
+.tags-ul li{float: left;margin-bottom: 10px}
+.tags-ul li a{
+	height: 29px;
+	cursor:text;
+	margin-right: 4px;
+	float: left;
+	color:#777777;
+}
+.tags-ul .active ,.tags-ul a:hover {color: #01cca3;}
+.tags-ul .tag span{
+	border: 1px solid #ebebeb;border-right: none;;border-radius: 2px;
+	height: 27px;
+	display: inline-block;
+	line-height: 27px;
+	font-size: 14px;
+	padding:0 8px;
+	float: left;
+	background-color: #fafafa;
+}
+.tags-ul .active span,.tags-ul a:hover span{border: 1px solid #01cca3;border-right: none;;border-radius: 2px;background:#fff;color: #01cca3; }
+
+.tags-ul .tag em{
+	background:url(../../../../images/icon/com_fill_icon.png) no-repeat  -24px -98px;color: #01cca3;cursor:text;margin-right: 4px;
+	width:14px;
+	height: 29px;
+	display: inline-block;
+	position: relative;
+	right: 1px;
+}
+.tags-ul .active em,.tags-ul a:hover em{background-position: 0 -98px;}
+
+
+
+.sys-tags li{margin-right: 12px}
+.sys-tags .tags-ul .tag{cursor: pointer;}
+.sys-tags label{float:left;}
+.com-tags .com-tags-tips{font-size: 16px;color: #d2d2d2;height: 39px}
+.com-tags li{margin-right: 40px}
+.com-tags li i{
+     background: url(../../../../images/icon/com_fill_icon.png) no-repeat -42px -98px;
+     width:19px;
+     height:19px;
+     display: inline-block;
+	position: relative;
+	top: 5px;
+     cursor: pointer;
+	}
+.btn-paste{background-color:#00cca3;line-height: 32px;height:32px;padding:0 15px;display: inline-block;margin-left: 4px }
+.btn-next-box a{color:#00cca3}
+.form-box .btn-next{
+ width: 256px;
+height: 40px;
+font-size: 16px;
+line-height: 40px;
+text-align: center;
+background: #00cca3;
+color: #fff;
+margin-left: 162px;
+display: block;
+margin-top: 100px;
+}
+.btn-next-box .btn-next{display: inline-block;margin-right: 26px}

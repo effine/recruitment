@@ -1,0 +1,92 @@
+@import "parameters";
+@left-nav-width:238px;
+body{
+  color:@base-font-color;
+}
+#wrapper{
+  .wrapper;
+  margin-top: 100px;
+};
+.left-nav{
+  width:@left-nav-width;
+  .f(l);
+}
+
+.btn-publish{
+  background-color: @base-color;
+  height: 40px;
+  .icon{
+    .f(l);
+    background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -2px -1px;
+    height: 15px;
+    width: 15px;
+    margin: 12.5px;
+  }
+  a{
+    color: #fff;
+    .f(l);
+    height: 40px;
+    line-height: 40px;
+    width: 198px;
+  }
+  &:hover{
+    background: #00e5b7;
+  }
+}
+
+.nav-list{
+  width: 100%;
+  height: auto;
+}
+
+.nav-title{
+  height: 50px;
+  line-height: 50px;
+  color: @base-font-color;
+  font-size:16px;
+  border-bottom: 2px solid #ebebeb;
+  span{
+    display: block;
+    width: 100px;
+    padding-left: 10px;
+    border-bottom:2px solid @base-color;
+  }
+}
+
+.nav-item{
+  a{
+    display: block;
+    padding: 20px 24px 0;
+    font-size: 14px;
+    color: @base-font-color;
+    &:hover{
+      color: @base-color;
+    }
+  }
+
+}
+.nav-item-current{
+  a{
+    color: @base-color;
+  }
+
+}
+.content{
+  width:1200-40-@left-nav-width ;
+  margin-left: 40px;
+  .f(l);
+}
+.publish-header{
+  width: 1200-40-3-@left-nav-width;
+  border-left: 3px solid @base-color;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+  h1{
+    width: 110px;
+    margin-left:16px ;
+    color: @base-font-color;
+    font-size:20px ;
+    .f(l);
+  }
+}

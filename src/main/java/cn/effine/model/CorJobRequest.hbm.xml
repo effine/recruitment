@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 岗位申请 -->
+<hibernate-mapping>
+	<class name="cn.effine.model.CorJobRequest" table="y_cor_job_request">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="usrId" type="int">
+			<column name="usr_id" not-null="true">
+				<comment>用户ID</comment>
+			</column>
+		</property>
+		<property name="jobId" type="int">
+			<column name="job_id" not-null="true">
+				<comment>岗位ID</comment>
+			</column>
+		</property>
+		<property name="qualityModel" type="string">
+			<column name="quality_model" length="500">
+				<comment>素质模型</comment>
+			</column>
+		</property>
+		<property name="skillModel" type="string">
+			<column name="skill_model" length="500">
+				<comment>技能模型</comment>
+			</column>
+		</property>
+		<property name="applyTime" type="string">
+			<column name="apply_time" length="50">
+				<comment>申请时间</comment>
+			</column>
+		</property>
+		<property name="status" type="int" />
+	</class>
+</hibernate-mapping>

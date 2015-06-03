@@ -1,0 +1,39 @@
+@base-color:#00cca3;
+@base-font-color:#777777;
+.f(l){
+  float:left;
+}
+.f(r){
+  float: right;
+}
+
+.wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*统一按钮样式*/
+.a(@width,@height,@bg:@base-color,@bg_hover:#00e5b7){
+  display: block;
+  width: @width;
+  height: @height;
+  line-height: @height;
+  text-align: center;
+  background: @bg;
+  &:hover{
+    background: @bg_hover;
+  }
+}
+
+.h(@hight){
+  height: @hight;
+  line-height: @hight;
+}
+
+/*透明度*/
+.opacity(@opa:70){
+  filter:alpha(opacity=@opa);
+  -moz-opacity:@opa/100;
+  -khtml-opacity:@opa/100;
+  opacity: @opa/100;
+}

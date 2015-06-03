@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-21 11:32:40
+ * @version $Id$
+ */
+
+.reg-content {
+    width: 960px;
+    margin: 0 auto
+}
+.reg-content .reg-head {
+    margin-top: 30px;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 1px dashed #ececec
+}
+.reg-content .reg-head h3 {
+    font-size: 16px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+ .reg-tip {
+    font-size: 14px;
+    color: #969696;
+    padding-left: 10px
+}
+ .reg-tabs {
+    margin: 22px 0 45px 96px
+}
+ .reg-tabs li {
+    float: left;
+}
+ .reg-tabs ul {
+    height: 35px;
+}
+ .reg-tabs a {
+    background: url(../../../images/icon/icon-reg.png) no-repeat 0 -40px;
+    width: 125px;
+    height: 35px;
+    display: block;
+    color: #000;
+    line-height: 35px;
+    text-align: center;
+    margin-right: 36px;
+}
+
+.reg-tabs .active,.reg-tabs a:hover {
+    background-position: 0 0;
+    color: #fff
+}
+.reg-content  .reg-forms {
+    width: 100%;
+    padding: 0
+}
+.reg-forms .reg-l {
+    padding: 0 74px 0 100px;
+    width: 414px;
+    float: left;
+}
+.reg-forms .reg-r {
+    width: 370px;
+    float: left;
+    border-left: 1px solid #d4d5d6
+}
+.reg-forms .reg-l .form-item {
+    margin-top: 8px;
+    line-height: 32px;
+    color: #5a5a5a;
+    position:relative;
+}
+ .reg-forms .reg-l label i{color: red;font-style: normal;padding:2px;}
+ .reg-forms .reg-l input {
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 5px;
+    width: 290px;
+    border: 1px solid #d2d2d2;
+    outline: none;
+    position: absolute;
+    right: 0;
+    *top:-4px;/*fixIE7*/
+}
+.reg-forms .reg-l .tips,.reg-forms .reg-l .isagr{height:20px;font-size: 12px;margin:2px 0 2px  112px;}
+.reg-forms .reg-l .isagr {color: #f45e64}
+.reg-forms .reg-l .ipt:focus{
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.4);
+}
+.reg-forms .reg-l .reg-radio{background:url(../../../images/icon/icon-reg.png) no-repeat -26px -122px;
+	width: 20px;height: 20px;display: inline-block;position: relative;top:5px;cursor:pointer;
+	}
+.reg-forms .reg-l .reg-radio.active{background-position: 0 -122px;}
+.reg-forms .reg-l .reg-arg-box{margin-top: 24px;line-height: 20px;}
+.reg-forms .reg-l .reg-arg{color: #ffb260; margin:0 5px 0 10px;}
+.reg-forms .reg-l  .reg-tk{color: #737373}
+.reg-forms  .reg-l .btn-reg{height: 42px;width: 100%;background: #f99c16;color: #fff;margin-top: 100px}
+.reg-forms  .reg-l .btn-reg:hover{background:#faa324}
+.reg-r dl , .reg-r .reg-login {width: 282px;margin:0 auto;color: #7c7c7c}
+.reg-r dl{min-height: 230px;line-height: 22px}
+
+.reg-r .reg-login .reg-sure{color: #737373;line-height: 36px;}
+.reg-r .reg-login .btn-login {width: 256px;height:40px;line-height: 40px;text-align:center;color: #fff;background: #00cca3}
+.reg-r .reg-login .btn-login:hover{background: #0ea}
+.reg-r  .normal-ques,.reg-r .ques-answer{line-height: 26px}

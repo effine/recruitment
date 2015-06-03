@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 字典  -->
+<hibernate-mapping>
+    <class name="cn.effine.model.Dict" table="y_dict">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="parentId" type="int">
+            <column name="parent_id" not-null="true">
+                <comment>字典类别ID</comment>
+            </column>
+        </property>
+        <property name="dictKey" type="string">
+        	<column name="dict_key">
+        		<comment>通过dict_key获取dict_value</comment>
+        	</column>
+        </property>
+        <property name="dictValue" type="string">
+        	<column name="dict_value">
+        		<comment>名称对应初始化值</comment>
+        	</column>
+        </property>
+        <property name="sortIndex" type="int">
+            <column name="sort_index">
+                <comment>排序</comment>
+            </column>
+        </property>
+        <property name="name" type="string" />
+    </class>
+</hibernate-mapping>

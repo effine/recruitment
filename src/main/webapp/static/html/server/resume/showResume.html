@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>注册-创建公司名</title>
+    <link href="/static/css/global.css" rel="stylesheet">
+    <link href="/static/css/page/server/corporation/buildCorporation.css" rel="stylesheet">
+    <script type="text/javascript">
+    var YL = {};
+    YL.BOOTSTAMP = new Date().getTime();
+    YL.STATIC_ROOT = "/static";
+    </script>
+</head>
+<body>
+        <!-- resume -->
+		 <div id="bd" class="mt20">
+		 	 <div class="wrap overflow-in per-font" id="J_per-resume">
+		 	 	<div class="mod-nav  bt-line">
+		 	 		<div class="fl pl20">
+		 	 			<h2>个人简历<em class="pl10">Resume</em></h2>
+		 	 		</div>
+		 	 		<button class=" fr btn-exp" data-mode="resume-export" ></button>
+		 	 	</div>
+		 	 	<!--个人基本信息-->
+		 	 	<div class="per-info per-base-info"> 
+		 	 	    <div class="info-nav ">
+		 	 	    	<h4>基本信息</h4>
+		 	 	    	<button class="resume-btn-edit" data-mode="per-base-info"></button>
+		 	 	    </div>
+		 	 	    <div class="clearfix  info-detail">
+		 	 	    	<div class="per-img fl pr">
+		 	 	    		<c:if test="${not empty model.avatar}">
+		 	 	    		    <img src="${ftp}${model.avatar}" class="base-info_avatar" id="J_per-img" width="116" height="160"/>
+		 	 	    		</c:if>
+		 	 	    		<c:if test="${empty model.avatar}">
+		 	 	    		    <img src="/static/images/resume-def.jpg" class="base-info_avatar" id="J_per-img" width="116" height="160"/>
+		 	 	    		</c:if>
+		 	 	    		<div class="per-upload-img hide" id="uploadStuProBtn">上传头像</div>
+		 	 	    	</div>
+		 	 	    	<div class="base-info">
+			 	 	    	<dl class="base-info-view">
+			 	 	    		<dt>
+			 	 	    		   <h4 class="base-info_name">
+			 	 	    				<c:if test="${model.name == null || model.name == '' }">姓名</c:if><c:if test="${model.name !=null && model.name !='' }">${model.name }</c:if>
+			 	 	    			</h4>
+			 	 	    		</dt>
+								<dt><h4>应聘岗位：<span class="base-info_knoId">
+										<c:forEach items="${knoList }" var="item" varStatus="ii">
+											<c:if test="${model.knoId==item.id }">
+												<c:out value="${item.knoName }"></c:out>
+										</c:if>
+										</c:forEach>
+									</span>
+								  </h4>
+								</dt>
+									
+			 	 	    		<dd>性别：<span  class="base-info_gender"><c:if test="${model.gender=='1' }">男</c:if><c:if test="${model.gender=='0' }">女</c:if></span></dd>
+			 	 	    		<dd>出生年月：<span class="base-info_time">${model.birthYear  }<c:if test="${model.birthYear !=null &&model.birthMonth !=null }">/</c:if>${model.birthMonth }</span></dd>
+			 	 	    		<dd>联系方式：<span class="base-info_contact">${model.contact  }</span></dd>
+			 	 	    		<dd>电子邮箱：<span class="base-info_email">${model.email  }</span></dd>
+			 	 	    		<dd>籍贯：<span  class="base-info_birthPlace">${model.birthPlace  }</span></dd>
+			 	 	    		<dd>专业：<span class="base-info_major">${model.major  }</span></dd>
+			 	 	    	</dl>
+			 	 	    	<form action="" method="post" id="J_resume_body_form" data-request="fail">
+			 	 	    	<dl class="base-info-input hide">
+			 	 	    		<dt><h4><label>姓名：</label><input type="text" name="name" value="${model.name }" datatype="*2-10" nullmsg="请输入您的姓名！" errormsg="昵称至少2个字符,最多10个字符！"  /></h4> </dt>
+								<dt><h4><label>应聘岗位：</label>
+								<select name="knoId" id="J_know_station">
+								    <c:forEach items="${knoList }" var="item" varStatus="ii">
+								    	<option <c:if test="${model.knoId==item.id }" >selected="selected" </c:if>  value="${item.id }"><c:out value="${item.knoName }"></c:out></option>
+								    </c:forEach>
+								</select>
+								</h4></dt>
+			 	 	    		
+			 	 	    		<dd class="sexual">
+			 	 	    		 	<label>性别：</label>
+			 	 	    		 	<p class="icon-radio">
+				 	 	    			<span class="male"><i  <c:if test="${model.gender=='1' }">class="icon-radio-nor icon-radio-cur"</c:if><c:if test="${model.gender!='1'}">class="icon-radio-nor"</c:if>></i>男</span>
+				 	 	    			<span class="female"><i <c:if test="${model.gender=='0' }">class="icon-radio-nor icon-radio-cur"</c:if><c:if test="${model.gender!='0'}">class="icon-radio-nor"</c:if>></i>女</span>
+			 	 	    			</p>
+			 	 	    	    </dd>
+			 	 	    		<dd class="birth">
+				 	 	    		<label>出生年月：</label>
+				 	 	    		 <select name="birthYear" class="year">
+                                             <c:forEach var="s" varStatus="ss" items="${yearList }">
+                                       	     	<option <c:if test="${model.birthYear == s}"> selected="selected" </c:if> value="${s }">${s }年</option>
+                                             </c:forEach>
+                                	</select>
+                                    <select name="birthMonth" class="month">
+                                         <c:forEach var="m" varStatus="mm" items="${monthList }">
+                                        	<option <c:if test="${model.birthMonth == m}"> selected="selected" </c:if> value="${m }">${m }月</option>
+                                        </c:forEach>
+                                    </select>
+			 	 	    		</dd>
+			 	 	    		<dd><label>联系方式：</label><input type="text" name="contact" value="${model.contact  }"  datatype="m" nullmsg="请输入手机号！"  errormsg="请输入正确的手机号！"/> </dd>
+			 	 	    		<dd><label>电子邮箱：</label><input type="text" name="email" value="${model.email  }"    datatype="e" nullmsg="请输入邮箱！"  errormsg="请入正确的邮箱！"/></dd>
+			 	 	    		<dd><label>籍贯：</label><input type="text" name="birthPlace" value="${model.birthPlace  }"/></dd>
+			 	 	    		<dd><label>专业： </label><input type="text" name="major" value="${model.major  }"/></dd>
+			 	 	    		<dd class="hide">
+				 	 	    		<input type="hidden" id="avatar" name="avatar" value="${model.avatar}"/>
+				 	 	    		<input type="hidden" name="usrId" value="${model.usrId }"/>
+				 	 	    		<input type="hidden" name="personalStatement" value="${model.personalStatement }"/>
+				 	 	    		<input type="hidden" name="gender" id="J_gender_switch" value="${model.gender }"/>
+				 	 	    		<input type="hidden" id="J_resume_id" name="id" value="${model.id }"/>
+			 	 	    		</dd>
+			 	 	    	</dl>
+			 	 	    		<div align="center" style="height:20px"><span id="RegError" class="validate_tips"></span></div> 
+			 	 	    	</form>
+		 	 	    	</div>
+		 	 	</div>
+		 	 	<!--技能评测-->
+				<div class="per-info per-skill-info"> 
+		 	 	    <div class="info-nav ">
+		 	 	    	<h4>技能评测</h4>
+		 	 	    </div>
+		 	 	     <div class=" clearfix  info-detail">
+		 	 	     	<div class="skill-img fl">
+		 	 	     	<!-- <input type="button" onclick="ExportMyChart()" value="Export" /><br/> -->
+		 	 	     	<div id="BruceDiv" data-knowId="${model.knoId}"></div> 
+		 	 	     	</div>
+		 	 	     	<div class="skill-info" id="J_skill-info">
+			 	 	     	<c:forEach var="s" varStatus="ss" items="${list3 }"> 
+							    <p>
+			 	 	     	    	<span class="name">${s.skillName }</span>
+							    	<span class="dian">...........................</span>
+							    	<span class="result" style="color:#a6da1b">${s.skillLevel }</span>
+			 	 	     	    </p>
+							</c:forEach> 
+		 	 	     	</div>
+		 	 	     </div>
+		 	 	</div>
+		 	 	<!--教育经历-->
+				<div class="per-info per-edu-info"> 
+		 	 	    <div class="info-nav ">
+		 	 	    	<h4>教育经历</h4>
+		 	 	    	<button class="resume-btn-edit" data-mode="per-edu-info"></button>
+		 	 	    </div>
+		 	 	     <div class=" clearfix  info-detail">
+		 	 	           <div class="edu-info">
+		 	 	           	
+ 											<div class="edu-info-view ">
+												<ul>
+												         <c:if test="${eduList.size()>0 }">
+												            <c:forEach items="${eduList }" var="e" varStatus="ee">
+												                 <li>
+												                      <span class="base-info_enrollTime">${e.enrollTime  }<c:if test="${e.enrollTime !=null &&e.graduateTime !=null }">~</c:if>${e.graduateTime }</span>
+												                      <span class="base-info_school">${e.school  }</span>
+												                      <span class="base-info_major">${e.major }</span>
+												                      <span class="base-info_degree">${e.degree }</span>
+												                 </li>
+												            </c:forEach>
+												         </c:if>
+												         <c:if test="${eduList.size()==0 }">
+												            <li>
+												               <span>入学年月~毕业年月</span>
+												               <span>学校</span>
+												               <span>专业</span>
+												               <span>学位</span>
+												   			 </li>
+												         </c:if>
+												</ul>
+												<h2>奖励经历</h2>
+												<ul>
+												    	<c:if test="${honorList.size()>0 }">
+												            <c:forEach items="${honorList }" var="h" varStatus="hh">
+												                 <li>
+												                      <span class="base-info_honor">${h.honor  }</span>
+												                      <span class="base-info_levels">${h.levels }</span>
+												                      <span class="base-info_prizeNum">${h.prizeNum }</span>
+												                 </li>
+												            </c:forEach>
+												         </c:if>
+												         <c:if test="${honorList.size()==0 }">
+												                 <li>
+												                      <span>奖项全称</span>
+												                      <span>奖项级别</span>
+												                      <span>获奖次数</span>
+												                 </li>
+												         </c:if>
+												</ul>
+							 	 	        </div>
+							 	 	        <div class="edu-info-input hide">
+							 	 	       		 <div class="edu-edu-input" data-title="edu">
+												    	<div class="resume-add btn-first">
+												       		 <button class="resume-btn-add fl" data-mode="resume-add"></button>
+												    	</div>
+												    	
+												    	<c:if test="${eduList.size()>0 }">
+												            <c:forEach items="${eduList }" var="e" varStatus="ee">
+												                 <div class="resume-del" data-delid="${e.id }">
+													                 <!--经历-->
+													                 <button class="resume-btn-del" data-mode="resume-del"></button>
+                                                                     <input type="hidden" name="id" value="${e.id }"></input>
+                                                                     <input type="hidden" name="usrId" value="${e.usrId }"></input>
+													                 <input class="start-sch resume-time" maxlength="7" name="enrollTime"              value="${e.enrollTime }" placeholder="入学年份"></input>~
+													                 <input class="end-sch resume-time" maxlength="7"  name="graduateTime"             value="${e.graduateTime  }" placeholder="毕业年份"></input>
+													                 <input class="school c-margin" type="text" name="school" value="${e.school }" placeholder="学校全称" />
+													                 <input class="major  c-margin" type="text" name="major"  value="${e.major }" placeholder="专业"/>
+													                 <select class="degree c-margin" name="degree">
+													                     <option <c:if test="${e.degree=='硕士' }">selected="selected"</c:if>>硕士</option>
+													                     <option <c:if test="${e.degree=='学士' }">selected="selected"</c:if>>学士</option>
+													                 </select>
+													            </div>
+												            </c:forEach>
+												         </c:if>
+												         <c:if test="${eduList.size()==0 }">
+												                 <div class="resume-del">
+													                 <!--经历-->
+													                 <button class="resume-btn-del" data-mode="resume-del"></button>
+                                                                     <input type="hidden" name="id" ></input>
+                                                                     <input type="hidden" name="usrId"  ></input>
+													                 <input class="start-sch resume-time" maxlength="7" name="enrollTime" placeholder="入学年份"></input>~
+													                 <input class="end-sch resume-time" maxlength="7"  name="graduateTime" placeholder="毕业年份"></input>
+													                 <input class="school c-margin" type="text" name="school" placeholder="学校全称" />
+													                 <input class="major  c-margin" type="text" name="major" placeholder="专业"/>
+													                 <select class="degree c-margin" name="degree">
+													                     <option>硕士</option>
+													                     <option>学士</option>
+													                 </select>
+													            </div>
+												         </c:if>
+													    
+													    <!--模板-->
+													    <div class="resume-def hide">
+													        <button class="resume-btn-del" data-mode="resume-del"></button>
+															 <input type="hidden" name="id"  ></input>
+                                                             <input type="hidden" name="usrId"  ></input>
+													         <input class="start-sch resume-time" maxlength="7" name="enrollTime" placeholder="入学年份"></input>~
+											                 <input class="end-sch resume-time" maxlength="7"  name="graduateTime" placeholder="毕业年份"></input>
+											                 <input class="school c-margin" type="text" name="school" placeholder="学校全称" />
+											                 <input class="major  c-margin" type="text" name="major" placeholder="专业"/>
+											                 <select class="degree c-margin" name="degree">
+													            <option>硕士</option>
+													            <option>学士</option>
+													        </select>
+													    </div>
+												</div>
+												<!--奖励-->
+												<div class="info-nav reward-nav">
+												    <h4>奖励经历</h4>
+												</div>
+
+												<div class="edu-reward-input" data-title="ward">
+												    <div class="resume-add btn-first">
+												        <button class="resume-btn-add fl" data-mode="resume-add"></button>
+												    </div>
+												    
+												    <c:if test="${honorList.size()>0 }">
+												            <c:forEach items="${honorList }" var="h" varStatus="hh">
+												                 <div class="resume-del" data-delid="${h.id }">
+												                    <button class="resume-btn-del" data-mode="resume-del"></button>
+												                    <input type="hidden" name="id" value="${h.id }"></input>
+                                                                    <input type="hidden" name="usrId" value="${h.usrId }"></input>
+												                    <input class="reward-name" type="text" name="honor" value="${h.honor }" placeholder="奖项全称"/>
+												                    <input class="reward-leavel  c-margin" type="text" name="levels" value="${h.levels }" placeholder="奖项级别"/>
+												                    <input class="reward-times  c-margin" type="text" name="prizeNum" value="${h.prizeNum }" placeholder="获奖次数"/>
+												                 </div>
+												            </c:forEach>
+												         </c:if>
+												         <c:if test="${honorList.size()==0 }">
+												                 <div class="resume-del">
+												                    <button class="resume-btn-del" data-mode="resume-del"></button>
+												                    <input type="hidden" name="id"  ></input>
+                                                                    <input type="hidden" name="usrId"  ></input>
+												                    <input class="reward-name" type="text" name="honor" placeholder="奖项全称" />
+												                    <input class="reward-leavel  c-margin" type="text" name="levels" placeholder="奖项级别" />
+												                    <input class="reward-times  c-margin" type="text" name="prizeNum" placeholder="获奖次数" />
+												                 </div>
+												         </c:if>
+												   
+												     <!--模板-->
+												    <div class="resume-def hide">
+												        <button class="resume-btn-del" data-mode="resume-del"></button>
+												        <input type="hidden" name="id"  ></input>
+                                                        <input type="hidden" name="usrId"  ></input>
+												        <input class="reward-name" type="text" name="honor" placeholder="奖项全称" />
+									                    <input class="reward-leavel  c-margin" type="text" name="levels" placeholder="奖项级别" />
+									                    <input class="reward-times  c-margin" type="text" name="prizeNum" placeholder="获奖次数" />
+												    </div>
+												</div>
+							 	 	        </div>
+
+		 	 	           </div>
+			 	 	        
+		 	 	     </div>
+		 	 	</div>
+		 	 	<!--项目经历-->
+				<div class=" per-info per-project-info"> 
+		 	 	    <div class="info-nav ">
+		 	 	    	<h4>项目经历</h4>
+		 	 	    	<button class="resume-btn-edit" data-mode="per-project-info"></button>
+		 	 	    </div>
+		 	 	     <div class=" clearfix info-detail ">
+		 	 	     	 <div class="project-info">
+								<div class="project-info-view">
+								    <c:if test="${comList.size()>0 }">
+									     <c:forEach items="${comList }" var="c" varStatus="cc">
+									     	<div class="pro-list">
+									     		        <span  class="base-info_entryTime">${c.entryTime  }<c:if test="${c.entryTime !=null &&c.turnoverTime !=null }">~</c:if>${c.turnoverTime }</span>
+									     		        <span  class="base-info_company">${c.company }</span>
+									     		        <span  class="base-info_department">${c.department }</span>
+									     		        <span  class="base-info_positions">${c.positions }</span>
+					 	 	     	     	</div>
+									     	<c:forEach items="${proList }" var="p" varStatus="pp">
+									     	   <c:if test="${p.companyId==c.id }">
+									     	   <div class="por-text">
+									     			<dl>
+									     				<dt><h2  class="base-info_prizeNum">${p.project }</h2><span><label>使用技能 : </label><strong class="skill">${p.skills }</strong></span></dt>
+									     				<dd  class="">${p.des1 }</dd>
+									     				<dd  class="">${p.des2 }</dd>
+									     				<dd  class="">${p.des3 }</dd>
+									     			</dl>
+									            </div>
+									     	   
+									     	   
+									     	   
+									     	   </c:if>
+									     	</c:forEach>
+									     </c:forEach>
+									</c:if>
+									<c:if test="${comList.size()==0 }">
+									     	<div class="pro-list">
+									     		        <span>开始时间~结束时间</span>
+									     		        <span>公司名称</span>
+									     		        <span>部门名称</span>
+									     		        <span>岗位名称</span>
+					 	 	     	     	</div>
+									     	   <div class="por-text">
+									     			<dl>
+									     				<dt><h2>项目名称</h2><span><label>使用技能 : </label><strong class="skill"></strong></span></dt>
+									     				<dd>简单概述项目情况</dd>
+									     				<dd>您在项目中的工作和作用</dd>
+									     				<dd>简单概述个人去的成绩</dd>
+									     			</dl>
+									            </div>
+									     	   
+									</c:if>
+									
+								</div>
+								<div class="project-info-input hide">
+					 	 	    	<!--公司-->
+					 	 	    	<div class="pro-com-input" data-title="company">
+						 	 	          <div class="resume-add btn-first"><button class="resume-btn-add fl" data-mode="resume-add"></button></div>
+						 	 	          
+						 	 	          <c:if test="${comList.size()>0 }">
+						 	 	          	<c:forEach items="${comList }" var="c" varStatus="cc">
+						 	 	            <div class="resume-del pro-skills" data-delid="${c.id }">
+						 	 	          	<button class="resume-btn-del" data-mode="resume-del"></button>
+						 	 	          	    <input type="hidden" name="id" value="${c.id }"></input>
+                                                               <input type="hidden" name="usrId" value="${c.usrId }"></input>
+						 	 	          		<input  class="pro-start  resume-time" maxlength="7" type="text" name="entryTime" value="${c.entryTime }" placeholder="开始时间" />~<input  class="pro-end resume-time" maxlength="7" type="text" name="turnoverTime" value="${c.turnoverTime }"  placeholder="结束时间" />
+							 	 	          	<input  class="pro-company  c-margin" type="text" name="company" value="${c.company }"  placeholder="公司名称" />
+							 	 	          	<input  class="pro-department  c-margin" type="text" name="department" value="${c.department }"  placeholder="部门名称"/>
+							 	 	          	<input  class="pro-post  c-margin" type="text" name="positions" value="${c.positions }"  placeholder="岗位名称"/>
+							 	 	          <!--项目-->
+									 	 	    <div class="pro-pro-input">
+										 	 	          <div class="resume-add "><button class="resume-btn-add fl" data-mode="resume-add"></button></div>
+										 	 	          <c:forEach items="${proList }" var="p" varStatus="pp">
+										 	 	          <c:if test="${p.companyId==c.id }">
+										 	 	          <div class="resume-del resume-del-child" data-delid="${p.id }">
+										 	 	          	<button class="resume-btn-del" data-mode="resume-del"></button>
+										 	 	          	 	<input type="hidden" name="id" value="${p.id }"></input>
+                                                              					<input type="hidden" name="usrId" value="${p.usrId }"></input>
+										 	 	          		<input  class="pro-name" type="text" name="project" value="${p.project }"  placeholder="项目名称"/>
+										 	 	          		<input   type="hidden" class="skill-list" name="skills" value="${p.skills}"/>
+										 	 	          		<span class="pro-skill"><label>使用技能(最多5个)：</label>
+										 	 	          		<c:if test="${p.skillList.size()>=1}">
+										 	 	          				<strong class="skill def hide" style="display:none">+</strong>
+										 	 	          		</c:if>
+										 	 	          		<c:if test="${p.skillList.size()<1}">
+										 	 	          			<strong class="skill def ">+</strong>
+										 	 	          		</c:if>
+										 	 	          		<c:forEach items="${p.skillList }" var="k" varStatus="kk">
+										 	 	          			<c:if test="${not empty k}"><strong class="skill skill-opt" data-name="${k}">${k}</strong></c:if>
+										 	 	          		</c:forEach>
+										 	 	          		</span>
+											 	 	          	<input  class="pro-summary  c-block" type="text" name="jobDescription" value="${p.des1 }" placeholder="简单概述项目情况"/>
+											 	 	          	<input  class="pro-detail  c-block" type="text" name="jobDescription" value="${p.des2 }" placeholder="您在项目中的工作和作用"/>
+											 	 	          	<input  class="pro-self-achieve  c-block" type="text" name="jobDescription" value="${p.des3 }" placeholder="简单概述个人去的成绩" />
+										 	 	          </div>
+										 	 	          </c:if>
+										 	 	          </c:forEach>
+										 	 	          <!--模板-->
+										 	 	          <div class="resume-def hide resume-del-child">
+										 	 	                	<button class="resume-btn-del" data-mode="resume-del"></button>
+										 	 	                		<input  class="pro-name" type="text" name="project" placeholder="项目名称"/>
+										 	 	                		<input   type="hidden" class="skill-list" name="skills" />
+																		<span class="pro-skill"><label>使用技能(最多5个)：</label><strong class="skill def">+</strong></span>	
+											 	 	                	<input  class="pro-summary  c-block" type="text" name="jobDescription" placeholder="简单概述项目情况"/>
+											 	 	                	<input  class="pro-detail  c-block" type="text" name="jobDescription"  placeholder="您在项目中的工作和作用" />
+											 	 	                	<input  class="pro-self-achieve  c-block" type="text" name="jobDescription"  placeholder="简单概述个人去的成绩"/>
+										 	 	          </div>
+									 	 	    </div>
+						 	 	          	</div>
+						 	 	          	</c:forEach>
+						 	 	          </c:if>
+						 	 	          
+						 	 	          <c:if test="${comList.size()==0 }">
+						 	 	          <div class="resume-del pro-skills">
+						 	 	          	<button class="resume-btn-del" data-mode="resume-del"></button>
+						 	 	          		<input  class="pro-start resume-time" maxlength="7" type="text" name="entryTime"  placeholder="开始时间"/>~<input  class="pro-end resume-time" maxlength="7" type="text" name="turnoverTime"  placeholder="结束时间" />
+							 	 	          	<input  class="pro-company  c-margin" type="text" name="company"  placeholder="公司名称"/>
+							 	 	          	<input  class="pro-department  c-margin" type="text" name="department"   placeholder="部门名称"/>
+							 	 	          	<input  class="pro-post  c-margin" type="text" name="positions"   placeholder="岗位名称"/>
+							 	 	          <!--项目-->
+									 	 	    <div class="pro-pro-input">
+										 	 	          <div class="resume-add "><button class="resume-btn-add fl" data-mode="resume-add"></button></div>
+										 	 	          <div class="resume-del resume-del-child">
+										 	 	          	<button class="resume-btn-del" data-mode="resume-del"></button>
+										 	 	          		<input  class="pro-name" type="text" name="project" placeholder="项目名称"/>
+										 	 	          		<input   type="hidden" class="skill-list" name="skills" />
+																<span class="pro-skill"><label>使用技能(最多5个)：</label><strong class="skill def">+</strong></span>																 	 	          	
+											 	 	             <input  class="pro-summary  c-block" type="text" name="jobDescription" placeholder="简单概述项目情况"/>
+									 	 	                	<input  class="pro-detail  c-block" type="text" name="jobDescription"  placeholder="您在项目中的工作和作用" />
+									 	 	                	<input  class="pro-self-achieve  c-block" type="text" name="jobDescription"  placeholder="简单概述个人去的成绩"/>
+										 	 	          </div>
+										 	 	          <!--模板-->
+										 	 	          <div class="resume-def hide resume-del-child">
+									 	 	                	<button class="resume-btn-del" data-mode="resume-del"></button>
+								 	 	                		<input  class="pro-name" type="text" name="project" placeholder="项目名称"/>
+								 	 	                		<input   type="hidden" class="skill-list" name="skills" />
+																<span class="pro-skill"><label>使用技能(最多5个)：</label><strong class="skill def">+</strong></span>	
+									 	 	                	<input  class="pro-summary  c-block" type="text" name="jobDescription" placeholder="简单概述项目情况"/>
+									 	 	                	<input  class="pro-detail  c-block" type="text" name="jobDescription"  placeholder="您在项目中的工作和作用" />
+									 	 	                	<input  class="pro-self-achieve  c-block" type="text" name="jobDescription" placeholder="简单概述个人去的成绩"/>
+										 	 	          </div>
+									 	 	    </div>
+						 	 	          </div>
+						 	 	          </c:if>
+						 	 	          <!--模板-->
+										    <div class="resume-def hide">
+						 	 	          	<button class="resume-btn-del" data-mode="resume-del"></button>
+						 	 	          		<input  class="pro-start resume-time" maxlength="7" type="text" name="entryTime" placeholder="开始时间"/>~<input  class="pro-end resume-time" maxlength="7" type="text" name="turnoverTime" placeholder="结束时间" />
+							 	 	          	<input  class="pro-company  c-margin" type="text" name="company" placeholder="公司名称"/>
+							 	 	          	<input  class="pro-department  c-margin" type="text" name="department" placeholder="部门名称"/>
+							 	 	          	<input  class="pro-post  c-margin" type="text" name="positions" placeholder="岗位名称"/>
+
+							 	 	          <!--项目-->
+									 	 	    <div class="pro-pro-input">
+										 	 	           <div class="resume-add "><button class="resume-btn-add fl" data-mode="resume-add"></button></div>
+										 	 	           <div class="resume-del resume-del-child">
+										 	 	          	<button class="resume-btn-del" data-mode="resume-del"></button>
+										 	 	          		<input  class="pro-name" type="text" name="project" placeholder="项目名称"/>
+										 	 	          		<input   type="hidden" class="skill-list" name="skills" />
+																<span class="pro-skill"><label>使用技能(最多5个)：</label><strong class="skill def">+</strong></span>																 	 	          	
+											 	 	             <input  class="pro-summary  c-block" type="text" name="jobDescription" placeholder="简单概述项目情况"/>
+									 	 	                	<input  class="pro-detail  c-block" type="text" name="jobDescription" placeholder="您在项目中的工作和作用" />
+									 	 	                	<input  class="pro-self-achieve  c-block" type="text" name="jobDescription" placeholder="简单概述个人去的成绩"/>
+										 	 	          </div>
+										 	 	          <!--模板-->
+										 	 	          <div class="resume-def hide resume-del-child">
+									 	 	                	<button class="resume-btn-del" data-mode="resume-del"></button>
+								 	 	                		<input  class="pro-name" type="text" name="project" placeholder="项目名称"/>
+								 	 	                		<input   type="hidden" class="skill-list" name="skills" />
+																<span class="pro-skill"><label>使用技能(最多5个)：</label><strong class="skill def">+</strong></span>	
+									 	 	                	<input  class="pro-summary  c-block" type="text" name="jobDescription" placeholder="简单概述项目情况"/>
+									 	 	                	<input  class="pro-detail  c-block" type="text" name="jobDescription" placeholder="您在项目中的工作和作用" />
+									 	 	                	<input  class="pro-self-achieve  c-block" type="text" name="jobDescription" placeholder="简单概述个人去的成绩"/>
+										 	 	          </div>
+									 	 	    </div>
+						 	 	          </div>
+
+						 	 	    </div>
+						 	 	 
+								</div>
+
+		 	 	     	 </div>
+		 	 	   		
+		 	 	     </div>
+		 	 	</div>
+		 	 	<!--自我介绍-->
+		 	 	<div class=" per-info per-introself-info"> 
+		 	 	    <div class="info-nav ">
+		 	 	    	<h4>自我描述</h4>
+		 	 	    	<button class="resume-btn-edit" data-mode="per-introself-info"></button>
+		 	 	    </div>
+		 	 	     <div class="clearfix info-detail ">
+		 	 	      <div class="introself-info">
+		 	 	   		<div class="introself-info-view">
+							<c:if test="${model.personalStatement==null || model.personalStatement == ''}">描述自己，让企业快速的了解你。你的故事、梦想、态度以及生活中的闪光点。</c:if>
+                            <c:if test="${model.personalStatement!=null && model.personalStatement != ''}">${model.personalStatement }</c:if>
+		 	 	   		</div>
+		 	 	   		<form action="" method="post" id="J_resume_statement_form">
+		 	 	   				<input type="hidden" name="usrId" value="${model.usrId }"/>
+			 	 	    		<input type="hidden" name="id" value="${model.id }"/>
+		 	 	   		<div class="introself-info-input hide">
+		 	 	   			<div class="introself-info-box">
+							    <div class="introself-title">
+							        <p style="float:right;margin-right:10px;">您还可以输入
+							            <span style="color:red;font-szie:weight;font-size:16px;" id="word_count">200</span>个字
+							        </p>
+							    </div>
+						    	<c:if test="${model==null || model.personalStatement == ''}"><textarea id="introself-textarea"  maxlength=200  name="personalStatement" placeholder="描述自己，让企业快速的了解你。你的故事、梦想、态度以及生活中的闪光点。"></textarea></c:if>
+								<c:if test="${model.personalStatement!=null && model.personalStatement != ''}"><textarea id="introself-textarea"  maxlength=200 name="personalStatement" placeholder="描述自己，让企业快速的了解你。你的故事、梦想、态度以及生活中的闪光点。">${model.personalStatement}</textarea></c:if>
+							</div>
+		 	 	   			
+								
+		 	 	   		</div>
+		 	 	   		</form>
+		 	 	   	</div>
+		 	 	</div>
+		 	 </div>
+		 </div>
+	</div>
+</div>
+</body>

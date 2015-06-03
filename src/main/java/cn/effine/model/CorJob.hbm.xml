@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 岗位 -->
+<hibernate-mapping>
+	<class name="cn.effine.model.CorJob" table="y_cor_job">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="corId" type="int">
+			<column name="cor_id" not-null="true" />
+		</property>
+		<property name="knoId" type="int">
+			<column name="kno_id" not-null="true" />
+		</property>
+		<property name="regionId" type="int">
+			<column name="region_id" not-null="false" />
+		</property>
+		<property name="educationId" type="int">
+			<column name="education_id" not-null="false"></column>
+		</property>
+		<property name="name" type="string" />
+		<property name="department" type="string" />
+		<property name="type" type="integer" />
+		<property name="lowestMonthSalary" type="string">
+			<column name="lowest_month_salary" length="255" />
+		</property>
+		<property name="highestMonthSalary" type="string">
+			<column name="highest_month_salary" length="255" />
+		</property>
+		<property name="isTomember" type="int">
+			<column name="is_tomember" not-null="false" />
+		</property>
+		<property name="isFoodPill" type="int">
+			<column name="is_food_pill" not-null="false" />
+		</property>
+		<property name="lure" type="string" />
+		<property name="description" type="string" />
+		<property name="sortIndex" type="int">
+			<column name="sort_index" />
+		</property>
+		<property name="status" type="int"/>
+		<property name="publishedTime" type="string">
+			<column name="published_time" length="50" />
+		</property>
+		<property name="address" type="string" />
+		<property name="refreshTime" type="string">
+			<column name="refresh_time" length="255" />
+		</property>
+	</class>
+</hibernate-mapping>

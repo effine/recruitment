@@ -1,0 +1,301 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*统一按钮样式*/
+/*透明度*/
+body {
+  color: #777777;
+}
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.left-nav {
+  width: 238px;
+  float: left;
+}
+.btn-publish {
+  background-color: #00cca3;
+  height: 40px;
+}
+.btn-publish .icon {
+  float: left;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -2px -1px;
+  height: 15px;
+  width: 15px;
+  margin: 12.5px;
+}
+.btn-publish a {
+  color: #fff;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  width: 198px;
+}
+.btn-publish:hover {
+  background: #00e5b7;
+}
+.nav-list {
+  width: 100%;
+  height: auto;
+}
+.nav-title {
+  height: 50px;
+  line-height: 50px;
+  color: #777777;
+  font-size: 16px;
+  border-bottom: 2px solid #ebebeb;
+}
+.nav-title span {
+  display: block;
+  width: 100px;
+  padding-left: 10px;
+  border-bottom: 2px solid #00cca3;
+}
+.nav-item a {
+  display: block;
+  padding: 20px 24px 0;
+  font-size: 14px;
+  color: #777777;
+}
+.nav-item a:hover {
+  color: #00cca3;
+}
+.nav-item-current a {
+  color: #00cca3;
+}
+.content {
+  width: 922px;
+  margin-left: 40px;
+  float: left;
+}
+.publish-header {
+  width: 919px;
+  border-left: 3px solid #00cca3;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+}
+.publish-header h1 {
+  width: 110px;
+  margin-left: 16px ;
+  color: #777777;
+  font-size: 20px ;
+  float: left;
+}
+.search {
+  width: 100%;
+  height: 46px;
+  position: relative;
+  border: 2px solid #00cca3;
+}
+.search .btn-search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 121px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  background: #00cca3;
+  font-size: 16px;
+}
+.search .btn-search:hover {
+  background: #00e5b7;
+}
+.search-input {
+  height: 16px;
+  padding: 15px;
+  width: 771px;
+  border: none;
+}
+.work-places {
+  height: 35px;
+  line-height: 35px;
+  font-size: 13px;
+  overflow: hidden;
+}
+.work-places h1 {
+  float: left;
+  display: block;
+  width: 70px;
+  padding-left: 15px ;
+}
+.work-places a {
+  display: block;
+  float: left;
+  width: 65px;
+  text-align: center;
+  margin-top: 11px;
+  height: 13px;
+  line-height: 13px;
+  border-right: 1px solid #777777;
+  color: #777777;
+}
+.work-places a:hover {
+  color: #00cca3;
+}
+.work-places .city-current {
+  color: #00cca3;
+}
+.companys {
+  height: 176px;
+  width: 100%;
+  overflow: hidden;
+}
+.company-item {
+  width: 176px;
+  height: 176px;
+  float: left;
+  margin-left: 10.5px;
+}
+.company-item a {
+  display: block;
+  width: 176px;
+  position: relative;
+}
+.company-item a:hover .company-name {
+  display: block;
+}
+.first {
+  margin-left: 0;
+}
+.company-name {
+  height: 176px;
+  line-height: 176px;
+  width: 176px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #4cdbbe;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  display: none;
+}
+.work-list {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.work-item {
+  background: #fafafa;
+  padding: 25px 20px 25px;
+  overflow: hidden;
+  font-size: 14px ;
+}
+.sec1 {
+  float: left;
+  width: 385px;
+}
+.work-name {
+  height: 22px;
+  line-height: 22px;
+  font-size: 20px;
+}
+.work-name span {
+  margin-left: 3px;
+  font-size: 14px;
+}
+.salary-xueli {
+  margin-top: 30px ;
+  min-height: 20px;
+}
+.xueli {
+  margin-left: 72px;
+}
+.work-details {
+  margin-top: 14px;
+}
+.sec2 {
+  width: 370px;
+  float: left;
+}
+.place-name {
+  font-size: 20px ;
+}
+.place-name span {
+  color: #00cca3;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.area-details {
+  margin-top: 30px;
+}
+.peonum {
+  margin-left: 40px;
+  min-height: 20px;
+}
+.welfare {
+  min-height: 20px ;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.welfare-item {
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #00cca3;
+  border-right: none;
+  width: auto;
+  min-width: 52px;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  background: #fff;
+  padding: 0 3px 0 5px;
+  margin-right: 10px;
+}
+.welfare-item span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 22px;
+  top: 0;
+  right: -10px;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -60px -56px;
+}
+.sec3 {
+  float: left;
+  width: 117px;
+  height: 106px;
+}
+.sec3 .btn-resume {
+  display: block;
+  width: 110px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #00cca3;
+  margin: 0 auto;
+  margin-top: 37px;
+}
+.sec3 .btn-resume:hover {
+  background: #00e5b7;
+}
+.bgfff {
+  background: #fff;
+}
+/*左导航主页独有的checkbox*/
+.nav-item a {
+  position: relative;
+}
+.nav-item a span {
+  position: absolute;
+  right: 0;
+  top: 14px;
+  display: block;
+  width: 14px ;
+  height: 20px;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -75px -102px;
+}
+.nav-item a:hover span,
+.nav-item a .checked span {
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -57px -102px;
+}

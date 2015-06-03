@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/view/decorators">
+	<!--非装饰页面 -->
+	<excludes>
+		<pattern>/static/*</pattern><!-- 静态资源 -->
+	</excludes>
+
+	<!-- 装饰页面：求职端 -->
+	<decorator name="header_footer" page="header_footer.jsp">
+		<!-- 公用-->
+		
+		<!-- 求职端 -->
+		
+		<!-- 服务端： 公司 -->
+		
+		<!-- 服务端： 岗位 -->
+		
+		
+		<!-- 服务端： 简历 -->
+		
+	</decorator>
+	
+	<!-- 装饰页面：服务端 -->
+	<decorator name="header_footer" page="header_footer.jsp">
+		<!-- 公用-->
+		
+		<!-- 公司 -->
+		
+		
+		<!-- 岗位 -->
+		<pattern>/job/publish</pattern>	<!--发布岗位 -->
+		
+		<!-- 简历 -->
+		
+	</decorator>
+	
+</decorators> 

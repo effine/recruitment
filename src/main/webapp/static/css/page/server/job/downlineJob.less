@@ -1,0 +1,142 @@
+@import "../../nav-left";
+
+.job-counts{
+  .f(l);
+  min-width:100px;
+  font-size: 14px;
+  span{
+    font-style: italic;
+    color: @base-color;
+  }
+}
+.job-lists{
+  margin-top: 22px;
+}
+.odd{
+  background:#fafafa ;
+}
+.job-item {
+  height: 115-32px;
+  padding: 25px 10px 25px;
+  width: 1200-40-50-@left-nav-width;
+}
+.job-details{
+  width: 100%;
+  height:100%;
+}
+
+.details1{
+  overflow: hidden;
+  .h(18px);
+  span{
+    font-size: 14px;
+  }
+}
+.job-name{
+  min-width:50%;
+  font-size: 18px;
+  span{  margin-left: 5px;}
+  .f(l);
+
+}
+.job-numbers{
+  .f(r);
+  font-size: 14px;
+  span{
+    color: @base-color;
+  }
+}
+.details2{
+  margin-top: 25px;
+  font-size: 14px;
+  overflow: hidden;
+  span{
+    min-width: 90px;
+    text-align: center;
+    display: block;
+    .f(l);
+  }
+  .type{
+    text-align: left;
+    min-width: 50px;
+  }
+  .salary{
+    border: 1px solid #b3b3b3;
+    border-top:none ;
+    border-bottom: none;
+  }
+}
+
+.details3{
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.refresh-time{
+  min-width: 150px;
+ .f(l);
+  font-size: 14px;
+}
+
+.operate{
+  .f(r);
+  font-size: 13px;
+  .h(20px);
+}
+
+.opeate-item{
+  color: @base-font-color;
+   position: relative;
+   padding-left: 20px;
+   margin-left: 20px;
+   display: inline-block;
+   height: 20px;
+   span{
+     left: 0;
+     top:0;
+     position: absolute;
+     display: block;
+     width: 20px;
+    .h(20px);
+   }
+
+  &:hover,.opeate-item-current{
+    color: @base-color;
+  }
+  &:hover .icon-refresh{
+    background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -75px -34px;
+  }
+  &:hover .icon-delete{
+    background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -30px -32px;
+  }
+  &:hover .icon-ale-refresh{
+    background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -29px -105px;
+  }
+  &:hover .icon-downline{
+    background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -29px -57px;
+  }
+  &:hover .icon-editor{
+    background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -29px -82px;
+  }
+ }
+
+.icon-refresh{
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -54px -34px;
+
+}
+.icon-delete{
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -1px -32px;
+
+}
+.icon-ale-refresh{
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -1px -104px;
+
+}
+
+.icon-downline{
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -1px -57px;
+
+}
+.icon-editor{
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -1px -81px;
+}

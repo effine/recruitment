@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-01-21 11:32:40
+ * @version $Id$
+ */
+
+.reg-content {
+    width: 960px;
+    margin: 0 auto
+}
+.reg-content .reg-head {
+    margin-top: 30px;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 1px dashed #ececec
+}
+.reg-content .reg-head h3 {
+    font-size: 16px;
+    line-height: 36px;
+    color: #5a5a5a;
+    font-weight: bold;
+}
+.reg-content .reg-head .warp-comtag{width:700px;margin:0 auto;}
+.reg-tip {
+    font-size: 14px;
+    color: #969696;
+    padding-left: 10px
+}
+.reg-tip-box{width:630px;margin: 0 auto;padding-left: 90px;margin-top: 120px;color:#a4a4a4;}
+.tip-head {padding-bottom: 38px;border-bottom: 1px dashed #b5b5b5}
+.tip-head .tip-con{font-size: 16px;}
+.tip-head .tip-sub{padding: 20px 0}
+.reg-tip-ques dt{padding: 22px 0}
+.reg-tip-ques dd{line-height: 26px;}

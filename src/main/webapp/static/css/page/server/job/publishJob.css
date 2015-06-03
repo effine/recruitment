@@ -1,0 +1,197 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*统一按钮样式*/
+body {
+  color: #777777;
+}
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.left-nav {
+  width: 238px;
+  float: left;
+}
+.btn-publish {
+  background-color: #00cca3;
+  height: 40px;
+}
+.btn-publish .icon {
+  float: left;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -2px -1px;
+  height: 15px;
+  width: 15px;
+  margin: 12.5px;
+}
+.btn-publish a {
+  color: #fff;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  width: 198px;
+}
+.btn-publish:hover {
+  background: #00e5b7;
+}
+.nav-list {
+  width: 100%;
+  height: auto;
+}
+.nav-title {
+  height: 50px;
+  line-height: 50px;
+  color: #777777;
+  font-size: 16px;
+  border-bottom: 2px solid #ebebeb;
+}
+.nav-title span {
+  display: block;
+  width: 100px;
+  padding-left: 10px;
+  border-bottom: 2px solid #00cca3;
+}
+.nav-item a {
+  display: block;
+  padding: 20px 24px 0;
+  font-size: 14px;
+  color: #777777;
+}
+.nav-item a:hover {
+  color: #00cca3;
+}
+.nav-item-current a {
+  color: #00cca3;
+}
+.content {
+  width: 922px;
+  margin-left: 40px;
+  float: left;
+}
+.publish-header {
+  width: 919px;
+  border-left: 3px solid #00cca3;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+}
+.publish-header h1 {
+  width: 110px;
+  margin-left: 16px ;
+  color: #777777;
+  font-size: 20px ;
+  float: left;
+}
+.publish-header {
+  width: 919px;
+  border-left: 3px solid #00cca3;
+  height: 28px;
+  line-height: 28px;
+  overflow: hidden;
+}
+.publish-header h1 {
+  width: 115px;
+  margin-left: 16px ;
+  color: #777777;
+  font-size: 20px ;
+  float: left;
+}
+/*头部*/
+.header-msg {
+  float: right;
+  overflow: hidden;
+}
+.header-msg .has-published,
+.header-msg .leave-jobs {
+  display: block;
+  float: right;
+  color: #777777;
+}
+.header-msg .has-published span,
+.header-msg .leave-jobs span {
+  color: #00cca3;
+  margin: 0 5px;
+  font-style: italic;
+}
+.leave-jobs {
+  margin-left: 24px;
+}
+.part {
+  padding: 10px 0 20px 0;
+  border-bottom: 1px dashed #c9c9c9;
+}
+.part-item {
+  margin-top: 20px;
+  margin-left: 18px;
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+}
+.part-item span,
+.part-item select {
+  display: block;
+  float: left;
+}
+.need {
+  color: #f06060;
+  width: 15px;
+  text-align: center;
+}
+.input-section {
+  margin-left: 13px;
+  width: 208px;
+  height: 14px;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 2px solid #e6e6e6;
+}
+.work-type {
+  display: block;
+  float: left;
+  text-align: center;
+  margin-left: 28px;
+  background: #fafafa;
+  width: 50px;
+  color: #777777;
+}
+.part-time-job {
+  color: #fff;
+  background: #00cca3;
+}
+.separate {
+  width: 40px ;
+  height: 35px;
+  background: url("/static/images/sprite_server/sprite_hr.png") no-repeat -53px 0;
+}
+.input-salary {
+  width: 96px;
+  float: left;
+}
+.input-high-salary {
+  margin-left: 0;
+}
+.job-describe {
+  width: 442px;
+}
+.submit-buttons {
+  height: 32px;
+  margin-top: 20px;
+  float: right;
+  width: 234px;
+  overflow: hidden;
+}
+.submit-buttons a {
+  float: left;
+  display: block;
+  width: 110px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #00cca3;
+  margin-left: 7px;
+}
+.submit-buttons a:hover {
+  background: #00e5b7;
+}
