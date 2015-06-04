@@ -4,7 +4,7 @@
 
 <!-- 用户简历 - 基本信息 -->
 <hibernate-mapping>
-	<class name="cn.effine.model.UsrResume" table="y_usr_resume">
+	<class name="cn.effine.model.UsrResume" table="usr_resume">
 		<id name="id" type="integer">
 			<column name="id" />
 			<generator class="increment" />

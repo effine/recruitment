@@ -34,7 +34,7 @@ public class CorJobReqInvitationDaoImpl extends HibernateDaoSupport implements C
 		}
 		
 		//统计中记录数
-		String sql = "select count(id) total from y_cor_job_req_invitation where cor_id = ?";
+		String sql = "select count(id) total from cor_job_req_invitation where cor_id = ?";
 		sql += appendSql;
 		int totalSize = 0; // 总记录数
 		List<Map<String, Object>> countList = super.querySql(sql, corporationId);
@@ -51,10 +51,10 @@ public class CorJobReqInvitationDaoImpl extends HibernateDaoSupport implements C
 		
 		sql = "select invatation.face_time faceTime, kno.kno_name jobName, dict.name jobName,"
 				+ " resume.id resumeId, resume.name, resume.avatar, resume.contact phone"
-				+ " from y_cor_job_req_invitation invatation"
-				+ " left join y_cor_job job on job.id = invatation.job_id"
-				+ " left join y_knowledge kno on kno.id = job.kno_id"
-				+ " left join y_usr_resume resume on resume.id = invatation.usr_id"
+				+ " from cor_job_req_invitation invatation"
+				+ " left join cor_job job on job.id = invatation.job_id"
+				+ " left join knowledge kno on kno.id = job.kno_id"
+				+ " left join usr_resume resume on resume.id = invatation.usr_id"
 				+ " where status = ? "+ appendSql +"order by faceTime desc limit ?, ?";
 		Pagination pagination = super.querySqlPagination(sql, corporationId, startIndex, pageSize);
 		if(null != pagination) pagination.setTotalSize(totalSize);

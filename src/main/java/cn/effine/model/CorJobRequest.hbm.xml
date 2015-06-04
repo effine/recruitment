@@ -4,7 +4,7 @@
 
 <!-- 岗位申请 -->
 <hibernate-mapping>
-	<class name="cn.effine.model.CorJobRequest" table="y_cor_job_request">
+	<class name="cn.effine.model.CorJobRequest" table="cor_job_request">
 		<id name="id" type="int">
 			<column name="id" />
 			<generator class="increment" />

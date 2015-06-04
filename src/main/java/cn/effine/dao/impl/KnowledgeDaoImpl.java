@@ -13,7 +13,7 @@ public class KnowledgeDaoImpl extends HibernateDaoSupport implements KnowledgeDa
 
 	@Override
 	public List<Map<String, Object>> getKnowlegeList() {
-		String sql = "select id, kno_name name from y_knowledge where status=1 order by sort_index";
+		String sql = "select id, kno_name name from knowledge where status=1 order by sort_index";
 		return super.querySql(sql);
 	}
 }

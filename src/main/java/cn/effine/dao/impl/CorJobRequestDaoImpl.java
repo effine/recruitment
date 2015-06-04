@@ -30,7 +30,7 @@ public class CorJobRequestDaoImpl extends HibernateDaoSupport implements CorJobR
 	@Override
 	public Pagination getResumeRequestList(int status, int currentPage) {
 		//统计中记录数
-		String sql = "select count(id) total from y_cor_job_request where status = ?";
+		String sql = "select count(id) total from cor_job_request where status = ?";
 		int totalSize = 0; // 总记录数
 		List<Map<String, Object>> countList = super.querySql(sql, status);
 		if (null != countList && 1 == countList.size())
@@ -46,10 +46,10 @@ public class CorJobRequestDaoImpl extends HibernateDaoSupport implements CorJobR
 		
 		sql = "select request.id, request.apply_time applyTime, kno.kno_name jobName,"
 				+ " resume.name, resume.gender, resume.school, resume.major, resume.avatar, resume.education"
-				+ " from y_cor_job_request request"
-				+ " left join y_cor_job job on job.id = request.job_id"
-				+ " left join y_knowledge kno on kno.id = job.kno_id"
-				+ " left join y_usr_resume resume on resume.id = request.usr_id"
+				+ " from cor_job_request request"
+				+ " left join cor_job job on job.id = request.job_id"
+				+ " left join knowledge kno on kno.id = job.kno_id"
+				+ " left join usr_resume resume on resume.id = request.usr_id"
 				+ " where status = ? order by request.apply_time desc limit ?, ?";
 		Pagination pagination = super.querySqlPagination(sql, status, startIndex, pageSize);
 		if(null != pagination) pagination.setTotalSize(totalSize);

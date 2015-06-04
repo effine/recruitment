@@ -4,7 +4,7 @@
 
 <!-- 知识分类 -->
 <hibernate-mapping>
-	<class name="cn.effine.model.Knowledge" table="y_knowledge">
+	<class name="cn.effine.model.Knowledge" table="knowledge">
 		<id name="id" type="int">
 			<column name="id" />
 			<generator class="increment" />

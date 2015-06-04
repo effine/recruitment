@@ -4,7 +4,7 @@
 
 <!-- 字典  -->
 <hibernate-mapping>
-    <class name="cn.effine.model.Dict" table="y_dict">
+    <class name="cn.effine.model.Dict" table="dict">
         <id name="id" type="int">
             <column name="id" />
             <generator class="increment" />

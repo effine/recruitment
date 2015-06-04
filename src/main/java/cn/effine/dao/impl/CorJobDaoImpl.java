@@ -21,13 +21,13 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 
 	@Override
 	public boolean updateRefreshTime(int jobId, String nowTime) {
-		String sql = "update y_cor_job set refresh_time=? where id=?";
+		String sql = "update cor_job set refresh_time=? where id=?";
 		return super.executeSql(sql, nowTime, jobId);
 	}
 
 	@Override
 	public boolean updateStatus(int jobId, int status) {
-		String sql = "update y_cor_job set status=? where id=?";
+		String sql = "update cor_job set status=? where id=?";
 		return super.executeSql(sql, status, jobId);
 	}
 
@@ -36,7 +36,7 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 		String sql = "select cor_id coreId, kno_id knoId, region_id regionId, education_id educationId,name,"
 				+ " department, type, lowest_month_salary lowestMonthSalary, highest_month_salary highestMonthSalary,"
 				+ " lure, description, address, refresh_timerefresh_time refreshTime"
-				+ " from y_cor_job where id=?";
+				+ " from cor_job where id=?";
 		List<Map<String,Object>> list = super.querySql(sql, jobId);
 		return  null!=list && 1==list.size() ? list.get(0) : null;
 	}
@@ -47,10 +47,10 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 				+ " job.lure, job.description, job.published_time publishedTime, "
 				+ " cor.cor_name corName, cor.homepage_url corUrl, cor.fields corFields, cor.scale corScale, cor.logo_img_url corLogoUrl,"
 				+ " dict.name regionName, dict.name educationName"
-				+ " from y_cor_job job"
-				+ " left join y_corporation cor on cor.id = job.cor_id"
-				+ " left join y_dict dict on dict.id = job.region_id"
-				+ " left join y_dict dict1 on dict1.id = job.education_id"
+				+ " from cor_job job"
+				+ " left join corporation cor on cor.id = job.cor_id"
+				+ " left join dict dict on dict.id = job.region_id"
+				+ " left join dict dict1 on dict1.id = job.education_id"
 				+ " where job.id=?";
 		List<Map<String,Object>> list = super.querySql(sql, jobId);
 		return  null!=list && 1==list.size() ? list.get(0) : null;
@@ -59,7 +59,7 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 	@Override
 	public Pagination getJobListByCorId(int corporationId, int currentPage) {
 		//统计中记录数
-		String sql  = "select count(id) total from y_cor_job where cor_id = ?";
+		String sql  = "select count(id) total from cor_job where cor_id = ?";
 		int totalSize = 0; // 总记录数
 		List<Map<String, Object>> countList = super.querySql(sql, corporationId);
 		if (null != countList && 1 == countList.size())
@@ -76,9 +76,9 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 		
 		sql = "select job.id, dict.name regionName, dict1.name educationName, job.name, job.type,"
 				+ " lowest_month_salary lowestMonthSalary,highest_month_salary highestMonthSalary, published_time publishTime"
-				+ " from y_cor_job job"
-				+ " left join y_dict dict on job.region_id = dict.id"
-				+ " left join y_dict dict1 on job.education_id = dict.id"
+				+ " from cor_job job"
+				+ " left join dict dict on job.region_id = dict.id"
+				+ " left join dict dict1 on job.education_id = dict.id"
 				+ " where cor_id = ? and status=1 order by job.refresh_time desc limit ?, ?";
 		Pagination pagination = super.querySqlPagination(sql, corporationId, startIndex, pageSize);
 		if(null != pagination) pagination.setTotalSize(totalSize);
@@ -88,7 +88,7 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 	@Override
 	public Pagination getJobListByStatus(int status, int currentPage) {
 		//统计中记录数
-		String sql  = "select count(id) total from y_cor_job where status = ?";
+		String sql  = "select count(id) total from cor_job where status = ?";
 		int totalSize = 0; // 总记录数
 		List<Map<String, Object>> countList = super.querySql(sql, status);
 		if (null != countList && 1 == countList.size())
@@ -105,9 +105,9 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 		
 		sql = "select job.id, dict.name regionName, dict1.name educationName, job.name, job.type,"
 				+ " lowest_month_salary lowestMonthSalary,highest_month_salary highestMonthSalary, refresh_time refreshTime"
-				+ " from y_cor_job job"
-				+ " left join y_dict dict on job.region_id = dict.id"
-				+ " left join y_dict dict1 on job.education_id = dict.id"
+				+ " from cor_job job"
+				+ " left join dict dict on job.region_id = dict.id"
+				+ " left join dict dict1 on job.education_id = dict.id"
 				+ " where status = ? order by job.refresh_time desc limit ?, ?";
 		 
 		 Pagination pagination = super.querySqlPagination(sql, status, startIndex, pageSize);
@@ -118,7 +118,7 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 	@Override
 	public Pagination getJobList(int currentPage) {
 		//统计中记录数
-		String sql  = "select count(id) total from y_cor_job where status = 1";
+		String sql  = "select count(id) total from cor_job where status = 1";
 		int totalSize = 0; // 总记录数
 		List<Map<String, Object>> countList = super.querySql(sql);
 		if (null != countList && 1 == countList.size())
@@ -136,10 +136,10 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 		sql = "select job.id, dict.name regionName, dict1.name educationName, job.name, job.department,"
 				+ " lowest_month_salary lowestMonthSalary,highest_month_salary highestMonthSalary, job.lure, job.published_time publishTime"
 				+ " cor.label, cor.fields, cor.scale"
-				+ " from y_cor_job job"
-				+ " left join y_dict dict on job.region_id = dict.id"
-				+ " left join y_dict dict1 on job.education_id = dict.id"
-				+ " left join y_corporation cor on cor.id = job.cor_id"
+				+ " from cor_job job"
+				+ " left join dict dict on job.region_id = dict.id"
+				+ " left join dict dict1 on job.education_id = dict.id"
+				+ " left join corporation cor on cor.id = job.cor_id"
 				+ " where status = 1 order by job.refresh_time desc limit ?, ?";
 		 
 		 Pagination pagination = super.querySqlPagination(sql, startIndex, pageSize);

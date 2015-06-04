@@ -4,7 +4,7 @@
 
 <!-- 公司 -->
 <hibernate-mapping>
-	<class name="cn.effine.model.Corporation" table="y_corporation">
+	<class name="cn.effine.model.Corporation" table="corporation">
 		<id name="id" type="int">
 			<column name="id" />
 			<generator class="increment" />

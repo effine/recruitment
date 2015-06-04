@@ -24,7 +24,7 @@ public class CorporationDaoImpl extends HibernateDaoSupport implements Corporati
 				+ " cor.description, dict.name regionName, cor.homepage_url homeUrl, cor.fields,"
 				+ " cor.scale, cor.logo_img_url logoUrl"
 				+ " from Corporation cor"
-				+ " left join y_dict dict on dict.id = cor.region_id"
+				+ " left join dict dict on dict.id = cor.region_id"
 				+ " where cor.id=? and cor.status=1";
 		List<Map<String,Object>> list = super.querySql(sql, corporationId);
 		return null!=list && list.size()==1 ? list.get(0) : null; 
@@ -32,7 +32,7 @@ public class CorporationDaoImpl extends HibernateDaoSupport implements Corporati
 
 	@Override
 	public List<Map<String, Object>> getCorporationList() {
-		String sql = "select id, cor_name name, logo_img_url url from y_corporation where is_main_show=1 and status=1";
+		String sql = "select id, cor_name name, logo_img_url url from corporation where is_main_show=1 and status=1";
 		return super.querySql(sql);
 	}
 }
