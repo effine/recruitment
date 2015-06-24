@@ -23,8 +23,9 @@ public class CollectionTest {
 		
 		// 添加新内容--dev分支
 
+		// 研究git的衍合-rebase分支
 		
-		
+		// rebase 之后的状态
 		
 		
 	}
