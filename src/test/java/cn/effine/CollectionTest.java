@@ -21,11 +21,9 @@ public class CollectionTest {
 		Map<String, Object> table = new Hashtable<String, Object>();
 		table.put(null, null);
 		
-		// 添加新内容--dev分支
-
-		// 研究git的衍合-rebase分支
+		// rebase分支
+		String re = "rebase";
 		
-		// rebase 之后的状态
 		
 		
 	}
