@@ -24,6 +24,8 @@ public class CollectionTest {
 		// rebase分支
 		String re = "rebase";
 		
+		System.err.println(re+"----------");
+		
 		
 		
 	}
