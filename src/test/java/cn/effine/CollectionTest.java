@@ -23,10 +23,9 @@ public class CollectionTest {
 		
 		// rebase分支
 		String re = "rebase";
-		
 		System.err.println(re+"----------");
 		
-		
-		
+		//  dev分支
+		String str = "develop";
 	}
 }
