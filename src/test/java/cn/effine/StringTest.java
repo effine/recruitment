@@ -8,6 +8,12 @@ package cn.effine;
 
 public class StringTest {
 	public static void main(String[] args) {
+		final String str1 = "a";
+		final String str2 = "b";
+		String str3 = "ab";
+		String str4 = str1 + str2;
+		System.err.println(str3 == str4);
+
 		System.err.println("----------------------------");
 		String a2 = "ab";
 		final String bb2 = "b";

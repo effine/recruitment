@@ -12,6 +12,19 @@ public class StringTest1 {
 		final String bb = getBB();
 		String b = "a" + bb;
 		System.out.println(a == b);
+
+		System.err.println("----------------------------------");
+
+		String s1 = "helloword";
+		String s2 = new String("helloword");
+		String s3 = "hello" + "word";
+		String s4 = new String("hello") + "word";
+
+		System.out.println(s1 == s2);
+		System.out.println(s1 == s3);
+		System.out.println(s1 == s4);
+		System.out.println(s2 == s4);
+
 	}
 
 	private static String getBB() {

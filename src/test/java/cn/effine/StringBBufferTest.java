@@ -6,6 +6,7 @@
 
 package cn.effine;
 
+
 public class StringBBufferTest {
 	public static void main(String[] args) {
 
