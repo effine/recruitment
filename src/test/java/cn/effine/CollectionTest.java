@@ -20,6 +20,12 @@ public class CollectionTest {
 		// HashTabe的底层分析
 		Map<String, Object> table = new Hashtable<String, Object>();
 		table.put(null, null);
+		
+		// 添加新内容--dev分支
 
+		
+		
+		
+		
 	}
 }
