@@ -21,5 +21,10 @@ public class CollectionTest {
 		Map<String, Object> table = new Hashtable<String, Object>();
 		table.put(null, null);
 
+		// 研究git的衍合-rebase分支
+		
+		
+		
+		
 	}
 }
