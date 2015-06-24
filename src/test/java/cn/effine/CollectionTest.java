@@ -25,7 +25,11 @@ public class CollectionTest {
 
 		// 研究git的衍合-rebase分支
 		
+<<<<<<< HEAD
 		// rebase 之后的状态
+=======
+		
+>>>>>>> rebase
 		
 		
 	}
