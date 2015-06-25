@@ -21,19 +21,13 @@ public class CollectionTest {
 		Map<String, Object> table = new Hashtable<String, Object>();
 		table.put(null, null);
 		
-<<<<<<< HEAD
 		// rebase分支
 		String re = "rebase";
 		System.err.println(re+"----------");
 		
 		//  dev分支
 		String str = "develop";
-=======
-		//  dev分支
-		String str = "develop";
 		System.err.println(str);
 		
-		
->>>>>>> update dev 2
 	}
 }
