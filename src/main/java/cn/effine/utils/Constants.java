@@ -26,9 +26,6 @@ public class Constants {
 	    para1,  para2,  para3,  para4;
 	}
 	
-	
-	
-	
 	/** 枚举：岗位性质  */
 	public static enum COR_JOB_TYPE {
 		fullTime(1, "全职"), trainee(2, "实习");
@@ -98,5 +95,4 @@ public class Constants {
 		JOB_TYPE_MAP.put(1, "全职");
 		JOB_TYPE_MAP.put(2, "实习");
 	}
- 
 }
