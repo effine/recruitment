@@ -33,11 +33,12 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 
 	@Override
 	public Map<String, Object> getJob(int jobId) {
-		String sql = "select cor_id coreId, kno_id knoId, region_id regionId, education_id educationId,name,"
-				+ " department, type, lowest_month_salary lowestMonthSalary, highest_month_salary highestMonthSalary,"
-				+ " lure, description, address, refresh_timerefresh_time refreshTime"
-				+ " from cor_job where id=?";
-		List<Map<String,Object>> list = super.querySql(sql, jobId);
+		StringBuilder sql = new StringBuilder();
+		sql.append("select cor_id coreId, kno_id knoId, region_id regionId, education_id educationId,name,");
+		sql.append(" department, type, lowest_month_salary lowestMonthSalary, highest_month_salary highestMonthSalary,");
+		sql.append(" lure, description, address, refresh_timerefresh_time refreshTime");
+		sql.append(" from cor_job where id=?");
+		List<Map<String,Object>> list = super.querySql(sql.toString(), jobId);
 		return  null!=list && 1==list.size() ? list.get(0) : null;
 	}
 	
