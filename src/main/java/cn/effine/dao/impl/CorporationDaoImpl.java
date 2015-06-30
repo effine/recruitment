@@ -20,13 +20,14 @@ public class CorporationDaoImpl extends HibernateDaoSupport implements Corporati
 
 	@Override
 	public Map<String,Object> getCorporation(int corporationId) {
-		String sql = "select cor.id, cor.cor_name name, cor.full_name fullName, cor.slogon, cor.label,"
-				+ " cor.description, dict.name regionName, cor.homepage_url homeUrl, cor.fields,"
-				+ " cor.scale, cor.logo_img_url logoUrl"
-				+ " from Corporation cor"
-				+ " left join dict dict on dict.id = cor.region_id"
-				+ " where cor.id=? and cor.status=1";
-		List<Map<String,Object>> list = super.querySql(sql, corporationId);
+		StringBuilder sql = new StringBuilder();
+		sql.append("select cor.id, cor.cor_name name, cor.full_name fullName, cor.slogon, cor.label,");
+		sql.append(" cor.description, dict.name regionName, cor.homepage_url homeUrl, cor.fields,");
+		sql.append(" cor.scale, cor.logo_img_url logoUrl");
+		sql.append(" from Corporation cor");
+		sql.append(" left join dict dict on dict.id = cor.region_id");
+		sql.append(" where cor.id=? and cor.status=1");
+		List<Map<String,Object>> list = super.querySql(sql.toString(), corporationId);
 		return null!=list && list.size()==1 ? list.get(0) : null; 
 	}
 
