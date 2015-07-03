@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="cn.effine.enterprise.utils.cn.effine.utils.Constants"%>
+<%@page import="cn.effine.utils.Constants"%>
 <c:set var="ftp" value="<%=Constants.FTP_DOMAIN %>"></c:set>
 <div id="hd" class="pr hd" data-platform="yl_s">
 	<a href="/lms"  target="_self" class="pa logo1" ><img <c:if test="${index =='index'}"> src="/static/images/logo/logo01.png" </c:if> <c:if test="${empty index}"> src="/static/images/logo/logo01-2.png"  </c:if>  alt="爱云路" /></a>

@@ -6,10 +6,6 @@ import org.apache.commons.mail.HtmlEmail;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Administrator
- *
- */
 public class EmailUtils {
 	private static Logger log =LoggerFactory.getLogger(EmailUtils.class);
 

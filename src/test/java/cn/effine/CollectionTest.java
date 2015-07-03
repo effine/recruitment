@@ -20,6 +20,14 @@ public class CollectionTest {
 		// HashTabe的底层分析
 		Map<String, Object> table = new Hashtable<String, Object>();
 		table.put(null, null);
-
+		
+		// rebase分支
+		String re = "rebase";
+		System.err.println(re+"----------");
+		
+		//  dev分支
+		String str = "develop";
+		System.err.println(str);
+		
 	}
 }
