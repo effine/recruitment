@@ -1,3 +1,12 @@
+third login:
+	- weibo
+	- qq
+	- github
+	- douban
+	- wechat
+	- google
+	- taobao
+
 待做工作：
 	- 用hibernate最新版本dao层
 	- 用mybatis最新版本完成dao层
