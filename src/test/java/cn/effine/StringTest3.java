@@ -17,5 +17,6 @@ public class StringTest3 {
 		System.out.println(s.intern() == a);
 		System.out.println(s == a.intern());
 		System.out.println(s.intern() == a.intern());
+		System.out.println("-------");
 	}
 }
