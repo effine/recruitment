@@ -134,16 +134,17 @@ public class CorJobDaoImpl extends HibernateDaoSupport implements CorJobDao {
 		if(currentPage > pageCount) currentPage = pageCount;	//当前页大于总页数则等于总页数
 		else if(currentPage < 1) currentPage = 1;	//当前页小于第一页则等于第一页
 		
-		sql = "select job.id, dict.name regionName, dict1.name educationName, job.name, job.department,"
-				+ " lowest_month_salary lowestMonthSalary,highest_month_salary highestMonthSalary, job.lure, job.published_time publishTime"
-				+ " cor.label, cor.fields, cor.scale"
-				+ " from cor_job job"
-				+ " left join dict dict on job.region_id = dict.id"
-				+ " left join dict dict1 on job.education_id = dict.id"
-				+ " left join corporation cor on cor.id = job.cor_id"
-				+ " where status = 1 order by job.refresh_time desc limit ?, ?";
+		StringBuilder builder = new StringBuilder();
+		builder.append("select job.id, dict.name regionName, dict1.name educationName, job.name, job.department,");
+		builder.append(" lowest_month_salary lowestMonthSalary,highest_month_salary highestMonthSalary, job.lure, job.published_time publishTime");
+		builder.append(" cor.label, cor.fields, cor.scale");
+		builder.append(" from cor_job job");
+		builder.append(" left join dict dict on job.region_id = dict.id");
+		builder.append(" left join dict dict1 on job.education_id = dict.id");
+		builder.append(" left join corporation cor on cor.id = job.cor_id");
+		builder.append(" where status = 1 order by job.refresh_time desc limit ?, ?");
 		 
-		 Pagination pagination = super.querySqlPagination(sql, startIndex, pageSize);
+		 Pagination pagination = super.querySqlPagination(builder.toString(), startIndex, pageSize);
 		 if(null != pagination) pagination.setTotalSize(totalSize);
 		 return pagination;
 	}
