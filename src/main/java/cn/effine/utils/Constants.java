@@ -21,7 +21,6 @@ public class Constants {
 
 	public static final long SEVEN_MILLIS = (long)(7 * 24 * 60 * 60 * 1000);	//七天时间毫秒数
 	
-	
 	public enum Belle {
 	    para1,  para2,  para3,  para4;
 	}

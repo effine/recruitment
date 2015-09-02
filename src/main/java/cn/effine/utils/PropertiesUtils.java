@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/** 操作properties文件类 */
+/**
+ *  操作properties文件类 
+ */
 public class PropertiesUtils {
-	
 	private PropertiesUtils() {
 		// 构造方法私有化，外部不能实例化该类 
 	}
