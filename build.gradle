@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'cn.effine'
+version = '1.0-dev'
+
+description = """recruitment"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version:'4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version:'4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-test', version:'4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aop', version:'4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aspects', version:'4.1.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-orm', version:'4.1.6.RELEASE'
+    compile group: 'org.logback-extensions', name: 'logback-ext-spring', version:'0.1.1'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.8.5'
+    compile group: 'org.hibernate', name: 'hibernate-c3p0', version:'4.3.10.Final'
+    compile group: 'org.hibernate', name: 'hibernate-validator', version:'5.1.3.Final'
+    compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.25'
+    compile group: 'com.googlecode.xmemcached', name: 'xmemcached', version:'1.3.7'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version:'3.9'
+    compile group: 'com.lowagie', name: 'itext', version:'2.0.8'
+    compile group: 'de.huxhorn.lilith', name: 'de.huxhorn.lilith.3rdparty.flyingsaucer.core-renderer', version:'8RC1'
+    compile group: 'opensymphony', name: 'sitemesh', version:'2.4.1'
+    compile group: 'com.jcraft', name: 'jsch', version:'0.1.51'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.0.1'
+    compile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'
+    compile group: 'jstl', name: 'jstl', version:'1.2'
+    compile group: 'org.apache.velocity', name: 'velocity', version:'1.6.2'
+    compile group: 'com.alibaba', name: 'fastjson', version:'1.2.6'
+    compile group: 'org.apache.commons', name: 'commons-email', version:'1.2'
+    compile group: 'commons-fileupload', name: 'commons-fileupload', version:'1.3.1'
+    compile group: 'commons-io', name: 'commons-io', version:'2.4'
+}

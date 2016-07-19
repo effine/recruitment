@@ -1,4 +1,11 @@
-# ignore files
+.settings/
+bin/
+src/main/webapp/WEB-INF/classes/
+target/
+build/
+.gradle/
+gradle/
+
 .classpath
 .project
 .settings
@@ -6,10 +13,3 @@
 *.jar
 *.war
 *.ear
-
-# ignore folder
-/.settings
-/bin
-/src/main/webapp/WEB-INF/classes/
-/target
-/target/
