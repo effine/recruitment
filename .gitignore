@@ -1,14 +1,13 @@
 .settings/
 bin/
-src/main/webapp/WEB-INF/classes/
 target/
+src/main/webapp/WEB-INF/classes/
 build/
 .gradle/
 gradle/
 
 .classpath
 .project
-.settings
 *.class
 *.jar
 *.war
